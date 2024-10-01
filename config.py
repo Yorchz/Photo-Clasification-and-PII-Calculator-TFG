@@ -23,7 +23,11 @@ CONFIG = {
         'cont_questions': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'questions_txt',
                                                        'Context_categorization.txt')),
 
-        'headers': ['Image', 'Number_of_People', 'Relevance', 'Gender', 'Location', 'Age', 'Group_Type', 'Activity_Type', 'Activity'],
+        'headers': ["Num_People","Role","Gender","Category","Age_Categories","Travel_Group","Activity_Type",
+                    "Activity_Done","Natural_Resources","Resource_Types","Flora_Types","Fauna_Types","Landscape_Types",
+                    "Tourist_Resources","Tourist_Resource_Types","Heritage_Types","Cultural_Elements","Gastronomy_Types",
+                    "Recreational_Products","Leisure_Activities","Leisure_Types","Sports_Types","Shopping_Facilities",
+                    "Accommodation","Accommodation_Types","Infrastructures","Infrastructure_Types"],
     },
     'model': {
         'model_name': 'blip2_t5',

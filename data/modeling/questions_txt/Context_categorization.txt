@@ -1,9 +1,19 @@
-question1 - a
-question2 - bfff
-question3 - cfff
-question4 - a
-question5 - e
-question6 - fffff
-question7 - fh
-question8 - fçgç
-
+question1 - Are there natural resources present in the image? (Yes/No)
+question2 - Which types of natural resources are present in the image? (Select all that apply: flora, fauna, landscapes)
+question3 - What types of flora are present: trees, plants, flowers, forests, vegetation, or others? (Select all that apply)
+question4 - What types of fauna are present: marine or terrestrial? (Select all that apply)
+question5 - What types of landscapes are present: beach, mountain, other natural landscapes? (Select all that apply)
+question6 - Are tourist resources present in the image? (Yes/No)
+question7 - Which types of tourist resources are present in the image? (Select all that apply: heritage, culture, gastronomy, recreational products)
+question8 - What types of heritage are present: archaeology, architecture, religious temples, monuments? (Select all that apply)
+question9 - What types of cultural elements are present: art centers, cultural facilities, or others? (Select all that apply)
+question10 - What types of gastronomy are present: food, drinks, or themed parks? (Select all that apply)
+question11 - What types of recreational products are present: theme parks, recreational boats, or others? (Select all that apply)
+question12 - Are leisure and recreation activities visible in the image? (Yes/No)
+question13 - Which types of leisure and recreation activities are present in the image? (Select all that apply: sports, shopping, other leisure activities)
+question14 - What types of sports are present: aquatic sports, mountain sports, wheel sports, other sports? (Select all that apply)
+question15 - Are there any visible shopping facilities: shops, malls, or others? (Select all that apply)
+question16 -Are accommodation facilities present in the image? (Yes/No)
+question17 -What types of accommodation or services are present: lodging facilities, pools, wellness centers, or others? (Select all that apply)
+question18 -Are infrastructures or other elements visible in the image? (Yes/No)
+question19 -Which types of infrastructures are present in the image? (Select all that apply: general infrastructure, maritime infrastructure, land infrastructure, transport)

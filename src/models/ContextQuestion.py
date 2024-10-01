@@ -11,3 +11,8 @@ class ContextQuestion:
     question6: str = None
     question7: str = None
     question8: str = None
+    question9: str = None
+    question10: str = None
+    question11: str = None
+    question12: str = None
+    question13: str = None
