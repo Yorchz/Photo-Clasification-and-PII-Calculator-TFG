@@ -17,18 +17,23 @@ class DataProcessor:
             df.to_csv(self.csv_path, index=False)
             print(f"CSV initialized at {self.csv_path}")
 
-    def generate_prompts(self, subjects, activities):
-        prompts = [f"Question: {subject}? Answer:" for subject in subjects]
-        prompts += [f"Question: {activity}? Answer:" for activity in activities]
+    def generate_prompts(self, subjects, activities, contexts):
+        categories = {'subject': subjects, 'action': activities, 'context': contexts}
+        prompts = {f"{category}{i + 1}": f"Question: {item}? Answer:"
+                   for category, items in categories.items()
+                   for i, item in enumerate(items)}
         return prompts
 
     def save_to_csv(self, label, answers):
         data = [label] + answers
         df = pd.DataFrame([data], columns=self.headers)
+        print(data)
+
         if os.path.exists(self.csv_path):
             df_existing = pd.read_csv(self.csv_path)
             df_combined = pd.concat([df_existing, df], ignore_index=True)
         else:
             df_combined = df
+
         df_combined.to_csv(self.csv_path, index=False)
         print(f"Data saved to {self.csv_path}")

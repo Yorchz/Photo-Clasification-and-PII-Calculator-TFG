@@ -23,9 +23,11 @@ class ModelGenerator:
         image = image_path.convert('RGB')
         image_tensor = self.vis_processors["eval"](image).unsqueeze(0).to(self.device)
         answers = []
-        for prompt in prompts:
+        for key, prompt in prompts.items():
+            print(prompt)
             answer = self.model_generate(image_tensor, prompt)
             answers.append(answer)
+            print(answer)
         return answers
 
     def model_generate(self, image_tensor, prompt):

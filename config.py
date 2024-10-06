@@ -14,12 +14,12 @@ CONFIG = {
         'repo_name': os.getenv('HF_REPO_NAME'),
     },
     'data': {
-        'csv_path': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'results', 'results2.csv')),
+        'csv_path': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'results', 'results.csv')),
         'image_dir': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'images')),
         'actv_questions': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'questions_txt',
                                                        'Represented_activities_categorization.txt')),
         'subj_questions': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'questions_txt',
-                                                       'Subjet_categorization.txt')),
+                                                       'Subject_categorization.txt')),
         'cont_questions': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'questions_txt',
                                                        'Context_categorization.txt')),
 
@@ -27,7 +27,7 @@ CONFIG = {
                     "Activity_Done","Natural_Resources","Resource_Types","Flora_Types","Fauna_Types","Landscape_Types",
                     "Tourist_Resources","Tourist_Resource_Types","Heritage_Types","Cultural_Elements","Gastronomy_Types",
                     "Recreational_Products","Leisure_Activities","Leisure_Types","Sports_Types","Shopping_Facilities",
-                    "Accommodation","Accommodation_Types","Infrastructures","Infrastructure_Types"],
+                    "Accommodation","Accommodation_Types","Infrastructures","Infrastructure_Types", 'aa'],
     },
     'model': {
         'model_name': 'blip2_t5',

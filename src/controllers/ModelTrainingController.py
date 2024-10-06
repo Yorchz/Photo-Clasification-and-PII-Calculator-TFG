@@ -1,3 +1,5 @@
+import answers
+
 from src.services.ModelGenerator import ModelGenerator
 
 
@@ -9,3 +11,4 @@ class ModelTrainingController:
 
     def generate_answers(self, image_path, prompts):
         return self.model_generator.generate_answers(image_path, prompts)
+

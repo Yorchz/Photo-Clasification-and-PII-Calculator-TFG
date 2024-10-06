@@ -15,17 +15,16 @@ class MainOrchestrator:
         self.data_processor = DataProcessor(config['data'])
 
     def run(self):
-        # Load questions from MongoDB
         subjects = self.question_controller.load_questions('Subject')
         activities = self.question_controller.load_questions('Activity')
+        context = self.question_controller.load_questions('Context')
 
-        # Generate prompts
-        prompts = self.data_processor.generate_prompts(subjects, activities)
+        prompts = self.data_processor.generate_prompts(subjects, activities, context)
 
-        # Load images and labels from HuggingFace
+        print(prompts)
+
         images, labels = self.image_controller.load_images()
 
-        # Process images and generate answers
         for idx, (image, label) in enumerate(zip(images, labels)):
             answers = self.model_training_controller.generate_answers(image, prompts)
             self.data_processor.save_to_csv(label, answers)
