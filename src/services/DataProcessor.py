@@ -24,16 +24,29 @@ class DataProcessor:
                    for i, item in enumerate(items)}
         return prompts
 
-    def save_to_csv(self, label, answers):
-        data = [label] + answers
-        df = pd.DataFrame([data], columns=self.headers)
-        print(data)
+    def _clean_answers(self, answers):
+        """Reemplaza None por 'NONE' en las respuestas."""
+        return ['NONE' if answer is None else answer for answer in answers]
 
+    def _build_dataframe(self, label, answers):
+        """Construye un DataFrame a partir de una etiqueta y respuestas."""
+        data = [label] + answers
+        return pd.DataFrame([data], columns=self.headers)
+
+    def _read_and_combine_csv(self, df):
+        """Lee el CSV existente y combina los datos con el nuevo DataFrame."""
         if os.path.exists(self.csv_path):
             df_existing = pd.read_csv(self.csv_path)
-            df_combined = pd.concat([df_existing, df], ignore_index=True)
+            return pd.concat([df_existing, df], ignore_index=True)
         else:
-            df_combined = df
+            return df
+
+    def save_to_csv(self, label, answers):
+        """Llama a las funciones auxiliares para procesar y guardar los datos en el CSV."""
+        answers = self._clean_answers(answers)
+
+        df = self._build_dataframe(label, answers)
+        df_combined = self._read_and_combine_csv(df)
 
         df_combined.to_csv(self.csv_path, index=False)
         print(f"Data saved to {self.csv_path}")

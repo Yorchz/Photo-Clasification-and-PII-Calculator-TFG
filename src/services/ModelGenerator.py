@@ -1,7 +1,6 @@
 import torch
 from lavis.models import load_model_and_preprocess
 
-
 class ModelGenerator:
     """Generates answers using the trained model."""
 
@@ -18,17 +17,16 @@ class ModelGenerator:
         )
         return model, vis_processors
 
-    def generate_answers(self, image_path, prompts):
-        """Genera respuestas para una imagen dada y una lista de prompts."""
+    def generate_answer(self, image_path, prompt):
+        """Genera una respuesta para una imagen dada y un prompt."""
         image = image_path.convert('RGB')
         image_tensor = self.vis_processors["eval"](image).unsqueeze(0).to(self.device)
-        answers = []
-        for key, prompt in prompts.items():
-            print(prompt)
-            answer = self.model_generate(image_tensor, prompt)
-            answers.append(answer)
-            print(answer)
-        return answers
+        answer = self.model_generate(image_tensor, prompt)
+        print(prompt)
+        print(f'Esta es la respuesta {answer} y este es su tipo {type(answer)} y esta es su '
+              f'longitud {len(answer)} y este es su primer elemento en la lista {answer[0]}'
+              f'y el tipode ese elemento es {type(answer[0])}')
+        return answer
 
     def model_generate(self, image_tensor, prompt):
         """Genera una respuesta utilizando el modelo cargado."""
