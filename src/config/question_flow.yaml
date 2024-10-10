@@ -3,3 +3,15 @@ question_flow:
     conditions:
       - condition: "value == '0'"
         skip_questions: ["subject2", "subject3", "subject4", "subject5", "subject6", "action1", "action2"]
+  context1:
+    conditions:
+      - condition: "value == 'No'"
+        skip_questions: ["context2", "context3", "context4", "context5"]
+  context2:
+    conditions:
+      - condition: "value == 'landscapes'"
+        skip_questions: ["context4", "context5"]
+      - condition: "value == 'fauna'"
+        skip_questions: ["context3", "context5"]
+      - condition: "value == 'flora'"
+        skip_questions: ["context3", "context4"]
