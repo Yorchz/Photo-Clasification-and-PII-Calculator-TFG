@@ -1,0 +1,103 @@
+question_flow:
+  subject1:
+    conditions:
+    - condition: value == '0'
+      skip_questions:
+      - subject2
+      - subject3
+      - subject4
+      - subject5
+      - subject6
+      - action1
+      - action2
+      inherited_skip: true
+  context1:
+    conditions:
+    - condition: value == 'No'
+      skip_questions:
+      - context2
+      - context3
+      - context4
+      - context5
+      inherited_skip: true
+  context2:
+    conditions:
+    - condition: value == 'flora'
+      skip_questions:
+      - context4
+      - context5
+      inherited_skip: false
+    - condition: value == 'fauna'
+      skip_questions:
+      - context3
+      - context5
+      inherited_skip: false
+    - condition: value == 'landscapes'
+      skip_questions:
+      - context3
+      - context4
+      inherited_skip: false
+  context6:
+    conditions:
+    - condition: value == 'No'
+      skip_questions:
+      - context7
+      - context8
+      - context9
+      - context10
+      inherited_skip: true
+  context7:
+    conditions:
+    - condition: value == 'heritage'
+      skip_questions:
+      - context9
+      - context10
+      inherited_skip: false
+    - condition: value == 'culture'
+      skip_questions:
+      - context8
+      - context10
+      inherited_skip: false
+    - condition: value == 'gastronomy'
+      skip_questions:
+      - context8
+      - context9
+      inherited_skip: false
+  context11:
+    conditions:
+    - condition: value == 'No'
+      skip_questions:
+      - context12
+      - context13
+      - context14
+      - context15
+      inherited_skip: true
+  context12:
+    conditions:
+    - condition: value == 'other leisure activities'
+      skip_questions:
+      - context14
+      - context15
+      inherited_skip: false
+    - condition: value == 'sports'
+      skip_questions:
+      - context13
+      - context15
+      inherited_skip: false
+    - condition: value == 'shopping'
+      skip_questions:
+      - context13
+      - context14
+      inherited_skip: false
+  context16:
+    conditions:
+    - condition: value == 'No'
+      skip_questions:
+      - context17
+      inherited_skip: true
+  context18:
+    conditions:
+    - condition: value == 'No'
+      skip_questions:
+      - context19
+      inherited_skip: true
