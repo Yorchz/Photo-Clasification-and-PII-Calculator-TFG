@@ -1,4 +1,4 @@
-from config import CONFIG
+from src.config.config import CONFIG
 from src.controllers.ImageController import ImageController
 
 if __name__ == "__main__":

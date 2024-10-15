@@ -1,4 +1,4 @@
-from config import CONFIG
+from src.config.config import CONFIG
 from src.orchestrators.MainOrchestrator import MainOrchestrator
 
 if __name__ == '__main__':
