@@ -6,7 +6,8 @@ class ConditionEvaluator:
         """Evalúa manualmente las condiciones simples."""
         if "==" in condition:
             left, right = condition.split("==")
-            print(f'Condición {type(right)} ==  Valor {value}')
+            a = right.strip().strip('"').strip("'")
+            print(f'Condición {a} ==  Valor {value} \n')
             return value == right.strip().strip('"').strip("'")
         else:
             raise ValueError(f"Condición no soportada: {condition}")
