@@ -25,7 +25,7 @@ class MainOrchestrator:
 
         images, labels = self.image_controller.load_images()
 
-        question_handler = QuestionHandler('C:/Users/usuario/Desktop/Photo_Categorization/photoCategorization/src/config/question_flow.yaml', prompts, self.model_training_controller)
+        question_handler = QuestionHandler(self.config['data'].get('question_flow_yaml'), prompts, self.model_training_controller)
 
         for idx, (image, label) in enumerate(zip(images, labels)):
             answers = question_handler.process_image(image)
