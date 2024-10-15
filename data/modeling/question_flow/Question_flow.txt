@@ -1,0 +1,15 @@
+subject1=0: subject2 subject3 subject4 subject5 subject6 action1 action2 | es_global=true
+context1=No: context2 context3 context4 context5 | es_global=true
+context2=flora: context4 context5 | es_global=false
+context2=fauna: context3 context5 | es_global=false
+context2=landscapes: context3 context4 | es_global=false
+context6=No: context7 context8 context9 context10 | es_global=true
+context7=heritage: context9 context10 | es_global=false
+context7=culture: context8 context10 | es_global=false
+context7=gastronomy: context8 context9 | es_global=false
+context11=No: context12 context13 context14 context15 | es_global=true
+context12=other leisure activities: context14 context15 | es_global=false
+context12=sports: context13 context15 | es_global=false
+context12=shopping: context13 context14 | es_global=false
+context16=No: context17 | es_global=true
+context18=No: context19 | es_global=true
