@@ -65,16 +65,16 @@ class MultiApp:
         elif menu_selection == '⬆️ Carga Flujo':
             flow_uploader = QFlowUploader()
             flow_uploader.run()
-        elif menu_selection == '⬇️️ Descargas Flujo':
-            imagenes_carga_app = QFlowDownloader()
-            imagenes_carga_app.run()
+        elif menu_selection == '⬇️ Descarga Flujo':
+            flow_downloader = QFlowDownloader()
+            flow_downloader.run()
 
         elif menu_selection == '⬆️ Carga Imagenes':
-            imagenes_carga_app = ImagenesCarga()
-            imagenes_carga_app.run()
-        elif menu_selection == '⬇️️ Descargas Imagenes':
-            imagenes_descarga_app = ImagenesDescarga()
-            imagenes_descarga_app.run()
+            image_uploader = ImagenesCarga()
+            image_uploader.run()
+        elif menu_selection == '⬇️️ Descarga Imagenes':
+            image_downloader = ImagenesDescarga()
+            image_downloader.run()
 
 
         elif menu_selection == '🖥️ Modelo':

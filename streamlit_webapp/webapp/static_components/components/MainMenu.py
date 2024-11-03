@@ -18,7 +18,7 @@ class MainMenu:
         '🖼️ Imágenes': {
             'submenu': {
                 '⬆️ Carga Imagenes': "Carga de Imágenes",
-                '⬇️ Descarga Imagenes': "Descarga de Imágenes"
+                '⬇️️ Descarga Imagenes': "Descarga de Imágenes"
             }
         },
         '🖥️ Modelo': {'submenu': None},

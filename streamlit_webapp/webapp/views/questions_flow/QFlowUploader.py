@@ -1,9 +1,9 @@
-from views.questions_flow.components.Subtitle import Subtitle
-from views.questions_flow.components.Title import Title
+from views.questions_flow.components.SubtitleUpload import SubtitleUpload
+from views.questions_flow.components.TitleUpload import TitleUpload
 
 
 class QFlowUploader:
 
     def run(self):
-        Title.title()
-        Subtitle.subtitle()
+        TitleUpload.title()
+        SubtitleUpload.subtitle()
