@@ -3,12 +3,14 @@ import os
 import streamlit as st
 
 from static_components.SideBar import SideBar
+from views.questions_flow.QFlowDownloader import QFlowDownloader
+from views.questions_flow.QFlowUploader import QFlowUploader
+from views.questions.QuestionsDownloader import QuestionsDownloader
 from views.ImagenesCarga import ImagenesCarga
 from views.ImagenesDescarga import ImagenesDescarga
 from views.home.Home import Home
 from views.model.Model import Model
-from views.questions.Questions import Questions
-from views.questions_flow.QuestionsFlow import QuestionsFlow
+from views.questions.QuestionsUploader import QuestionsUploader
 
 
 class MultiApp:
@@ -53,19 +55,27 @@ class MultiApp:
             home = Home()
             home.run()
 
-        elif menu_selection == '⬇️ DU Preguntas':
-            questions_control = Questions()
-            questions_control.run()
-        elif menu_selection == '⬆️ DU Lógica de Preguntas':
-            question_flow = QuestionsFlow()
-            question_flow.run()
+        elif menu_selection == '⬆️ Carga Preguntas':
+            questions_uploader = QuestionsUploader()
+            questions_uploader.run()
+        elif menu_selection == '⬇️️ Descargas Preguntas':
+            questions_downloader = QuestionsDownloader()
+            questions_downloader.run()
 
-        elif menu_selection == '⬇️ Descarga de Imágenes':
-            imagenes_descarga_app = ImagenesDescarga()
-            imagenes_descarga_app.run()
-        elif menu_selection == '⬆️ Carga de Imágenes':
+        elif menu_selection == '⬆️ Carga Flujo':
+            flow_uploader = QFlowUploader()
+            flow_uploader.run()
+        elif menu_selection == '⬇️️ Descargas Flujo':
+            imagenes_carga_app = QFlowDownloader()
+            imagenes_carga_app.run()
+
+        elif menu_selection == '⬆️ Carga Imagenes':
             imagenes_carga_app = ImagenesCarga()
             imagenes_carga_app.run()
+        elif menu_selection == '⬇️️ Descargas Imagenes':
+            imagenes_descarga_app = ImagenesDescarga()
+            imagenes_descarga_app.run()
+
 
         elif menu_selection == '🖥️ Modelo':
             modelo_app = Model()

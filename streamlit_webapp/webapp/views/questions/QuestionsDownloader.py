@@ -4,7 +4,7 @@ from views.questions.components.QuestionConfiguration import QuestionConfigurati
 from views.questions.components.QuestionUploader import QuestionUploader
 
 
-class Questions:
+class QuestionsDownloader:
 
     def run(self):
         Title.title()

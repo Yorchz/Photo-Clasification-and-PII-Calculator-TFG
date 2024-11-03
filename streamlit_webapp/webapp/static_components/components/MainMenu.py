@@ -5,14 +5,20 @@ class MainMenu:
         '🏡 Inicio': {'submenu': None},
         '❓ Preguntas': {
             'submenu': {
-                '⬇️ DU Preguntas': "Carga/Descarga de preguntas",
-                '⬆️ DU Lógica de Preguntas': "Carga/Descarga de Lógica de Preguntas",
+                '⬆️ Carga Preguntas': "Carga de preguntas",
+                '⬇️️ Descargas Preguntas': "Descarga de preguntas",
+            }
+        },
+        '🔁 Flujo de Preguntas': {
+            'submenu': {
+                '⬆️ Carga Flujo': "Carga del Flujo de preguntas",
+                '⬇️ Descarga Flujo': "Descarga del Flujo de Preguntas",
             }
         },
         '🖼️ Imágenes': {
             'submenu': {
-                '⬇️ Descarga de Imágenes': "Descarga de Imágenes",
-                '⬆️ Carga de Imágenes': "Carga de Imágenes"
+                '⬆️ Carga Imagenes': "Carga de Imágenes",
+                '⬇️ Descarga Imagenes': "Descarga de Imágenes"
             }
         },
         '🖥️ Modelo': {'submenu': None},
