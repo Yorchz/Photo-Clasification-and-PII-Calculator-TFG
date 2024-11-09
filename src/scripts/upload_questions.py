@@ -8,9 +8,9 @@ if __name__ == "__main__":
     SUBJ_QUESTIONS = CONFIG['data'].get('subj_questions')
     CONT_QUESTIONS = CONFIG['data'].get('cont_questions')
 
-    text_file_paths = [ACTV_QUESTIONS, SUBJ_QUESTIONS, CONT_QUESTIONS]
+    text_file_paths = [ACTV_QUESTIONS]
 
     question_controller = QuestionController(CONFIG['mongodb'])
-    question_controller.upload_questions(text_file_paths)
+    question_controller.upload_questions(text_file_paths, "actv_questions")
 
     print("Question Upload Process Completed")

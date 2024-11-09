@@ -2,15 +2,14 @@
 class TextFileParser:
     """Parses text files containing questions."""
 
-    def __init__(self, file_path):
-        self.file_path = file_path
-        self.data = self.parse_file()
+    def __init__(self, file_content, selection):
+        self.file_content = file_content.decode('utf-8')
+        self.selection = selection
+        self.data = self.parse_content()
 
-    def parse_file(self):
-        with open(self.file_path, 'r') as file:
-            lines = file.readlines()
-
-        title = self.file_path.split('\\')[-1].replace('.txt', '')
+    def parse_content(self):
+        print(f"\n Cpntenido decodificado {self.file_content}, selección {self.selection}\n")
+        lines = self.file_content.splitlines()
         questions = {}
         for line in lines:
             if line.strip():
@@ -18,7 +17,7 @@ class TextFileParser:
                 questions[question_number.strip()] = question_text.strip()
 
         return {
-            "title": title,
+            "title": self.selection,
             "questions": [{key: value} for key, value in questions.items()]
         }
 

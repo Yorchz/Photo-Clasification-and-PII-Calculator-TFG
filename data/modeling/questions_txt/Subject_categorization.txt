@@ -3,4 +3,4 @@ question2 - Do the people in the image have a primary or secondary role?
 question3 - What is the gender of the people visible in the image, male, female, both?
 question4 - Are the people in the image locals, workers, or tourists?
 question5 - "What age categories are present in the image? Indicate if there are children, young adults, adults, or elderly, and specify all that apply."
-question6 - Is it a family travel group, a couple, neither?
+question6 - Is it a family travel group, a couple, neither? b b b b b b b b bb b

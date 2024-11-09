@@ -1,6 +1,4 @@
-import answers
-
-from src.services.ModelGenerator import ModelGenerator
+from src.services.internal.ModelGenerator import ModelGenerator
 
 
 class ModelTrainingController:

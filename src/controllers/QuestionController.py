@@ -1,5 +1,5 @@
 from src.orchestrators.QuestionDataOrchestrator import QuestionDataOrchestrator
-from src.services.MongoDBService import MongoDBService
+from src.services.internal.MongoDBService import MongoDBService
 
 
 class QuestionController:
@@ -8,11 +8,11 @@ class QuestionController:
     def __init__(self, config):
         self.mongodb_service = MongoDBService(config)
 
-    def upload_questions(self, file_paths):
+    def upload_questions(self, file_contents, selection):
         orchestrator = QuestionDataOrchestrator(self.mongodb_service)
+        print(f"En el cuestionControler estan {file_contents} y tambien la seleccion {selection} \n")
         try:
-            for file_path in file_paths:
-                orchestrator.update_questions_from_text(file_path)
+            orchestrator.update_questions_from_text(file_contents, selection)
             print("All questions have been uploaded.")
         finally:
             self.mongodb_service.close()

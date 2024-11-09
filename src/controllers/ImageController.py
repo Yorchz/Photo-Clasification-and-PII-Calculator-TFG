@@ -1,4 +1,4 @@
-from src.services.HuggingFaceService import HuggingFaceService
+from src.services.internal.HuggingFaceService import HuggingFaceService
 
 
 class ImageController:

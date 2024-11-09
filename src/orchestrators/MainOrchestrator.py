@@ -1,7 +1,7 @@
 from src.controllers.ImageController import ImageController
 from src.controllers.ModelTrainingController import ModelTrainingController
 from src.controllers.QuestionController import QuestionController
-from src.services.DataProcessor import DataProcessor
+from src.services.internal.DataProcessor import DataProcessor
 from src.handlers.QuestionHandler import QuestionHandler
 
 
