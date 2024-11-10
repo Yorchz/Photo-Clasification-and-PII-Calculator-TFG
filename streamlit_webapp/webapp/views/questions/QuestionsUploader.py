@@ -1,19 +1,18 @@
 import streamlit as st
-from views.questions.components.Subtitle import Subtitle
 from views.questions.components.Title import Title
 from views.questions.components.QuestionConfiguration import QuestionConfiguration
 from views.questions.components.QuestionUploader import QuestionUploader
-from views.questions.components.QSession import Session
 from views.questions.components.QuestionAssistant import QuestionAssistant
-
-from streamlit_webapp.webapp.views.questions.components.QInstructions import QInstructions
+from views.questions.components.QInstructions import QInstructions
+from views.questions.components.QSession import QSession
+from views.questions.components.Subtitle import Subtitle
 
 
 class QuestionsUploader:
 
     @staticmethod
     def _initialize_session():
-        Session.session()
+        QSession.session()
 
     @staticmethod
     def _generate_event():

@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-class Result:
+class QResult:
 
     @staticmethod
     def result(response: bool, selection: str):

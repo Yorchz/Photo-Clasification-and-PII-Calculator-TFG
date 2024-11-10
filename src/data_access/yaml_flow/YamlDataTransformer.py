@@ -1,7 +1,8 @@
-# src/transformer.py
+
 class YamlDataTransformer:
     def __init__(self, parsed_data):
         self.parsed_data = parsed_data
+        print(self.parsed_data)
 
     def transform(self):
         yaml_data = {}
