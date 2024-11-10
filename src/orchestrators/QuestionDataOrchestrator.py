@@ -30,7 +30,11 @@ class QuestionDataOrchestrator:
         return question_instance
 
     def update_questions_from_text(self, file_content, selection):
-        print(f"En el orquestador estan {file_content} y tambien la seleccion {selection} \n")
-        data = TextFileParser(file_content, selection).parse_content()
+        data = TextFileParser(file_content=file_content, selection=selection).json_parse_content()
         self.uploader.upload_data(data)
         print("Data has been uploaded to MongoDB.")
+
+    def download_questions_from_db(self, selection, query):
+        print(f"La seleccion {selection} \n")
+        data = TextFileParser(selection=selection, questions=query).txt_parse_content()
+        return data

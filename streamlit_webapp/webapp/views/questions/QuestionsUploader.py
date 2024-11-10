@@ -26,11 +26,10 @@ class QuestionsUploader:
         Subtitle.subtitle()
         self._initialize_session()
 
-
         question_conf = QuestionConfiguration()
         question_conf.configuration()
 
-        QInstructions.instructions()
+        QInstructions.upload_instructions()
         QuestionUploader.file_upload()
 
         question_assistant = QuestionAssistant(self._generate_event())

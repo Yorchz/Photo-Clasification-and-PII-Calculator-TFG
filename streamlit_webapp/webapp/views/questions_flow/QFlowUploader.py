@@ -26,7 +26,7 @@ class QFlowUploader:
         SubtitleUpload.subtitle()
         self._initialize_session()
 
-        FInstructions.instructions()
+        FInstructions.instructions_upload()
         YamlFlowUploader.file_upload()
 
         question_flow_assistant = QFlowAssistant(self._generate_event())

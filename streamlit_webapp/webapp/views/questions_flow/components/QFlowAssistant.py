@@ -20,7 +20,7 @@ class QFlowAssistant:
             else:
                 st.error("Debe seleccionar la categoria del archivo y el nuevo archivo que quiere usar para su actualización.")
 
-
+    
 
     def _check_inputs_status(self):
         file_status = self.current_file is None

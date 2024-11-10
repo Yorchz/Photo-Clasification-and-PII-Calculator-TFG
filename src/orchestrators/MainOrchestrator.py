@@ -16,9 +16,9 @@ class MainOrchestrator:
         self.data_processor = DataProcessor(config['data'])
 
     def run(self):
-        subjects = self.question_controller.load_questions('Subject')
-        activities = self.question_controller.load_questions('Activity')
-        context = self.question_controller.load_questions('Context')
+        subjects = self.question_controller.load_questions('Subject_categorization')
+        activities = self.question_controller.load_questions('Represented_activities_categorization')
+        context = self.question_controller.load_questions('Context_categorization')
 
         prompts = self.data_processor.generate_prompts(subjects, activities, context)
         print(prompts)

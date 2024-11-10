@@ -19,12 +19,8 @@ CONFIG = {
 
         'question_flow_yaml': os.path.abspath(os.path.join(os.getcwd(), 'src', 'config', 'question_flow.yaml')),
 
-        'actv_questions': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'questions_txt',
-                                                       'Represented_activities_categorization.txt')),
-        'subj_questions': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'questions_txt',
-                                                       'Subject_categorization.txt')),
-        'cont_questions': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'questions_txt',
-                                                       'Context_categorization.txt')),
+        'out_flow_path': os.path.abspath(os.path.join(os.getcwd(), '..', '..', '..', 'Downloads')),
+
         'question_flow_txt': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'question_flow',
                                                                        'Question_flow.txt')),
 
