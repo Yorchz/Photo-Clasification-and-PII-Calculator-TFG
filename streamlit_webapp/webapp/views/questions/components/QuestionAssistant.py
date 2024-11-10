@@ -27,7 +27,6 @@ class QuestionAssistant:
             selection_status, file_status = self._check_inputs_status()
             if not selection_status:
                 response = self.q_downloader_service.download(self.selected_file)
-                print(f"Esta es la resupues {response}")
                 QResult.download_result(response)
             else:
                 st.error("Debe seleccionar la categoria del archivo para proceder a la descarga.")

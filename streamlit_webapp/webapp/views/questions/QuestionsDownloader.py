@@ -17,7 +17,7 @@ class QuestionsDownloader:
     def _generate_event():
         return {
             'selection': st.session_state.selected_file,
-            'file': st.session_state.uploaded_file.getvalue() if st.session_state.uploaded_file is not None else {}
+            'file': None
         }
 
     def run(self):
