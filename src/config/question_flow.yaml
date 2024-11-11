@@ -1,25 +1,4 @@
 question_flow:
-  subject1:
-    conditions:
-    - condition: value == '0'
-      skip_questions:
-      - subject2
-      - subject3
-      - subject4
-      - subject5
-      - subject6
-      - action1
-      - action2
-      inherited_skip: true
-  context1:
-    conditions:
-    - condition: value == 'No'
-      skip_questions:
-      - context2
-      - context3
-      - context4
-      - context5
-      inherited_skip: true
   context2:
     conditions:
     - condition: value == 'flora'

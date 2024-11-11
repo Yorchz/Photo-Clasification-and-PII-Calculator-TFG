@@ -8,7 +8,8 @@ from src.data_access.yaml_flow.YamlTextParser import YamlTextParser
 
 if __name__ == "__main__":
 
-    """QUESTION_FLOW_TXT = CONFIG['data'].get('question_flow_txt')
+    """
+    QUESTION_FLOW_TXT = CONFIG['data'].get('question_flow_txt')
     QUESTION_FLOW_YAML = CONFIG['data'].get('question_flow_yaml')
 
 

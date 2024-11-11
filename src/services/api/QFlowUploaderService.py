@@ -10,7 +10,7 @@ class QFlowUploaderService:
     def upload(file):
         save_directory = CONFIG['data'].get('question_flow_yaml')
         try:
-            data = YamlGenerator(YamlDataTransformer(YamlTextParser(file).parse()).transform(),
+            YamlGenerator(YamlDataTransformer(YamlTextParser(file).parse()).transform(),
                           save_directory).generate()
             return True
         except Exception as e:

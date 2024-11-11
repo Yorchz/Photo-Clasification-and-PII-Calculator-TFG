@@ -37,7 +37,7 @@ class TextFileParser:
 
         print(formatted_questions)
 
-        with open(os.path.join(self.out_phat, f"{self.selection}{datetime.now().strftime('%Y%m%d')}.txt"),
+        with open(os.path.join(self.out_phat, f"{self.selection}_{datetime.now().strftime('%Y%m%d')}.txt"),
                   'w', encoding='utf-8') as file:
             file.write("\n".join(formatted_questions))
 

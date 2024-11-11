@@ -2,12 +2,12 @@
 class YamlTextParser:
 
     def __init__(self, file_content):
-        self.file_content = file_content.decode("utf-8")
+        self.file_content = file_content
         print(f"Contenido ya en el back del codigo {self.file_content}")
 
     def parse(self):
         data = {}
-        lines = self.file_content.splitlines()
+        lines = self.file_content.decode("utf-8").splitlines()
 
         for line in lines:
             line = line.strip()
