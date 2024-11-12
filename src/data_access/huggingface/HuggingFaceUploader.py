@@ -29,24 +29,19 @@ class HuggingFaceUploader:
             return None
         return load_dataset(self.repo_name, split="train", token=self.token)
 
-    def upload_images(self, image_dir: str):
-        """Sube imágenes al repositorio, combinando con las imágenes existentes si ya hay un dataset."""
+    def upload_images(self, images: list):
+
         existing_dataset = self._get_or_create_repo()
 
-        # Cargar las nuevas imágenes desde el directorio
-        images = [{"image": str(path), "label": path.name} for path in Path(image_dir).glob("*") if path.is_file()]
-        if not images:
-            print(f"No images found in {image_dir}.")
-            return
+        new_dataset = Dataset.from_dict(
+            {
+                "image": [img["content"] for img in images],  # Contenido binario de cada imagen
+                "label": [img["filename"] for img in images]  # Nombre del archivo como etiqueta
+            },
+            features=Features({"image": Image(), "label": Value("string")})
+        )
 
-        # Crear el nuevo dataset con las imágenes de la carpeta
-        new_dataset = Dataset.from_dict({"image": [img["image"] for img in images],
-                                         "label": [img["label"] for img in images]},
-                                        features=Features({"image": Image(), "label": Value("string")}))
-
-        # Combinar datasets si ya existen imágenes
         combined_dataset = concatenate_datasets([existing_dataset, new_dataset]) if existing_dataset else new_dataset
 
-        # Subir el dataset combinado
         DatasetDict({"train": combined_dataset}).push_to_hub(repo_id=self.repo_name, token=self.token)
         print(f"Dataset updated and pushed to {self.repo_name}.")

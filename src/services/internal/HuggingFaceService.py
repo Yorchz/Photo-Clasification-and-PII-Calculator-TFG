@@ -9,10 +9,10 @@ class HuggingFaceService:
         self.token = config['token']
         self.repo_name = config['repo_name']
 
-    def upload_images(self, image_dir: str):
+    def upload_images(self, images: list):
         uploader = HuggingFaceUploader(self.token, self.repo_name)
-        uploader.upload_images(image_dir)
-        print(f"Images from {image_dir} have been uploaded to {self.repo_name}.")
+        uploader.upload_images(images)
+        print(f"Images from have been uploaded to {self.repo_name}.")
 
     def load_dataset(self):
         loader = HuggingFaceLoader(self.repo_name, token=self.token)

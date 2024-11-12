@@ -3,11 +3,11 @@ import os
 import streamlit as st
 
 from static_components.SideBar import SideBar
+from views.images.ImageDownloader import ImageDownloader
+from views.images.ImageUploader import ImageUploader
 from views.questions_flow.QFlowDownloader import QFlowDownloader
 from views.questions_flow.QFlowUploader import QFlowUploader
 from views.questions.QuestionsDownloader import QuestionsDownloader
-from views.ImagenesCarga import ImagenesCarga
-from views.ImagenesDescarga import ImagenesDescarga
 from views.home.Home import Home
 from views.model.Model import Model
 from views.questions.QuestionsUploader import QuestionsUploader
@@ -70,10 +70,10 @@ class MultiApp:
             flow_downloader.run()
 
         elif menu_selection == '⬆️ Carga Imagenes':
-            image_uploader = ImagenesCarga()
+            image_uploader = ImageUploader()
             image_uploader.run()
         elif menu_selection == '⬇️️ Descarga Imagenes':
-            image_downloader = ImagenesDescarga()
+            image_downloader = ImageDownloader()
             image_downloader.run()
 
 

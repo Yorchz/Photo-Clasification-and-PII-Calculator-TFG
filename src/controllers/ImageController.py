@@ -4,11 +4,11 @@ from src.services.internal.HuggingFaceService import HuggingFaceService
 class ImageController:
     """Controller to handle image-related operations."""
 
-    def __init__(self, config):
-        self.hf_service = HuggingFaceService(config['huggingface'])
+    def __init__(self, hf_config):
+        self.hf_service = HuggingFaceService(hf_config)
 
-    def upload_images(self, image_dir: str):
-        self.hf_service.upload_images(image_dir)
+    def upload_images(self, images: list):
+        self.hf_service.upload_images(images)
 
     def load_images(self):
         return self.hf_service.load_dataset()

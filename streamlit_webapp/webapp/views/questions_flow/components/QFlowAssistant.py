@@ -17,7 +17,6 @@ class QFlowAssistant:
         if st.button("Actualizar Fujo de Preguntas"):
             file_status = self._check_inputs_status()
             if not file_status:
-                print(f"Este es el contenido del fichero: \n {self.current_file}")
                 response = self.q_uploader_service.upload(self.current_file)
                 FResult.upload_result(response)
             else:
