@@ -5,6 +5,6 @@ class DirectoryImageUploader:
     def images_upload():
         st.session_state.uploaded_images = st.file_uploader(
             label="Seleccione una o varias imágenes para cargar",
-            type=['png', 'jpg', 'jpeg'],
+            type=['jpg'],
             accept_multiple_files=True
         )

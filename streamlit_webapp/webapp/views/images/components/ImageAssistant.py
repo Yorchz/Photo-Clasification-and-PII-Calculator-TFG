@@ -1,4 +1,6 @@
 import streamlit as st
+
+from src.services.api.ImageDownloaderService import ImageDownloaderService
 from src.services.api.ImageUploaderService import ImageUploaderService
 from views.questions_flow.components.FResult import FResult
 from views.images.components.PResult import PResult
@@ -9,7 +11,7 @@ class ImageAssistant:
     def __init__(self, event):
         self.images = event['images']
         self.image_uploader_service = ImageUploaderService()
-        self.image_download_service = None
+        self.image_download_service = ImageDownloaderService()
 
 
     def event_upload_images(self):
@@ -23,9 +25,9 @@ class ImageAssistant:
 
 
     def event_download_images(self):
-        if st.button("Descargar Fujo de Preguntas"):
-            response = self.q_downloader_service.download()
-            FResult.download_result(response)
+        if st.button("Descargar Imagenes de la Base de Datos"):
+            response = self.image_download_service.download()
+            PResult.download_result(response)
 
 
 

@@ -7,7 +7,7 @@ class YamlToTextTransformer:
     def __init__(self, yaml_file_path):
         self.yaml_file_path = yaml_file_path
         self.file_name = "Question_flow"
-        self.out_path = CONFIG['data']['out_flow_path']
+        self.out_path = CONFIG['data']['out_info_path']
         self.yaml_data = self._load_yaml()
 
     def _load_yaml(self):

@@ -11,7 +11,7 @@ class TextFileParser:
         self.file_content = file_content
         self.selection = selection
         self.questions = questions
-        self.out_phat = CONFIG['data']['out_flow_path']
+        self.out_phat = CONFIG['data']['out_info_path']
         print(f"Ruta de descarga {self.out_phat}\n")
         print(f"Contenido de preguntas {self.questions}\n")
 

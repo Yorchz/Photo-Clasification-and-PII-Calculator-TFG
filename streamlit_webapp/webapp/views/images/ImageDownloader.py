@@ -3,6 +3,9 @@ from views.images.components.PSession import PSession
 from views.images.components.SubtitleDownload import SubtitleDownload
 from views.images.components.TitleDownload import TitleDownload
 
+from streamlit_webapp.webapp.views.images.components.ImageAssistant import ImageAssistant
+from streamlit_webapp.webapp.views.images.components.PInstructions import PInstructions
+
 
 class ImageDownloader:
 
@@ -13,10 +16,15 @@ class ImageDownloader:
     @staticmethod
     def _generate_event():
         return {
-            'file': st.session_state.uploaded_file.getvalue() if st.session_state.uploaded_file is not None else {}
+            'images': None
         }
 
     def run(self):
         TitleDownload.title()
         SubtitleDownload.subtitle()
         self._initialize_session()
+
+        PInstructions.instructions_download()
+
+        image_assistant = ImageAssistant(self._generate_event())
+        image_assistant.event_download_images()
