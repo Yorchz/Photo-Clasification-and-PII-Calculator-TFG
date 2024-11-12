@@ -4,8 +4,7 @@ from views.images.components.SubtitleUpload import SubtitleUpload
 from views.images.components.TitleUpload import TitleUpload
 from views.images.components.DirectoryImageUploader import DirectoryImageUploader
 from views.images.components.PInstructions import PInstructions
-
-from streamlit_webapp.webapp.views.images.components.ImageAssistant import ImageAssistant
+from views.images.components.ImageAssistant import ImageAssistant
 
 
 class ImageUploader:
