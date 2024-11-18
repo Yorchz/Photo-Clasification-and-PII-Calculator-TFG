@@ -2,9 +2,8 @@ import streamlit as st
 from views.images.components.PSession import PSession
 from views.images.components.SubtitleDownload import SubtitleDownload
 from views.images.components.TitleDownload import TitleDownload
-
-from streamlit_webapp.webapp.views.images.components.ImageAssistant import ImageAssistant
-from streamlit_webapp.webapp.views.images.components.PInstructions import PInstructions
+from views.images.components.ImageAssistant import ImageAssistant
+from views.images.components.PInstructions import PInstructions
 
 
 class ImageDownloader:
