@@ -4,9 +4,9 @@ from lavis.models import load_model_and_preprocess
 class ModelGenerator:
     """Generates answers using the trained model."""
 
-    def __init__(self, config):
+    def __init__(self, model_name: str, model_type: str):
         self.device = str(torch.device("cuda") if torch.cuda.is_available() else "cpu")
-        self.model, self.vis_processors = self.load_model(config['model_name'], config['model_type'])
+        self.model, self.vis_processors = self.load_model(model_name, model_type)
 
     def load_model(self, model_name, model_type):
         print(f"Loading model {model_name} of type {model_type}")

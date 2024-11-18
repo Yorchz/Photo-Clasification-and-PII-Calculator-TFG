@@ -8,11 +8,11 @@ from src.handlers.QuestionHandler import QuestionHandler
 class MainOrchestrator:
     """Main orchestrator to handle different processes."""
 
-    def __init__(self, config):
+    def __init__(self,config, model_name: str, model_type: str):
         self.config = config
         self.question_controller = QuestionController(config['mongodb'])
         self.image_controller = ImageController(config)
-        self.model_training_controller = ModelTrainingController(config)
+        self.model_training_controller = ModelTrainingController(model_name, model_type)
         self.data_processor = DataProcessor(config['data'])
 
     def run(self):
@@ -21,7 +21,6 @@ class MainOrchestrator:
         context = self.question_controller.load_questions('Context_categorization')
 
         prompts = self.data_processor.generate_prompts(subjects, activities, context)
-        print(prompts)
 
         images, labels = self.image_controller.load_images()
 

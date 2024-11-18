@@ -13,7 +13,7 @@ class ModelConfiguration:
     def _select_box():
         seleccion = st.selectbox(
             "Elige una opción:",
-            ["blip_vqa vqav2", "pnp_vqa base", "blip2_t5_pretrain flant5xl", "blip2_opt caption_coco_opt2.7b"],
+            ["blip_vqa vqav2", "pnp_vqa base", "blip2_t5 pretrain_flant5xl", "blip2_opt caption_coco_opt2.7b"],
             index=0
         )
         return seleccion

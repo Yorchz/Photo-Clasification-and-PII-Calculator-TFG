@@ -1,7 +1,6 @@
 import streamlit as st
-from views.questions.components.QResutl import QResult
-from src.services.api.QuestionDownloaderService import QuestionDownloaderService
-from src.services.api.QuestionUploaderService import QuestionUploaderService
+from src.services.api.ModelService import ModelService
+from views.model.components.ModelResult import ModelResult
 
 
 class ModelAssistant:
@@ -9,13 +8,19 @@ class ModelAssistant:
     def __init__(self, event):
         self.selected_model = event['model_name']
         self.model_type = event['model_type']
+        self.model_controller = ModelService()
 
 
 
     def event_generate_data(self):
         if st.button("Generar datos"):
             model_type_status, model_status = self._check_inputs_status()
-            print(f"{self.selected_model}, {self.model_type}")
+            if not (model_type_status and model_status):
+                response = self.model_controller.run(self.selected_model, self.model_type)
+                ModelResult.model_result(response)
+            else:
+                st.error("Debe seleccionar el modelo que va a utilizar previamente.")
+
 
     def _check_inputs_status(self):
         selection_status = self.selected_model is None
