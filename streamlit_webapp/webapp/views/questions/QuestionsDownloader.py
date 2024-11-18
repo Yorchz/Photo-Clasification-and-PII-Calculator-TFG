@@ -27,7 +27,7 @@ class QuestionsDownloader:
         question_conf = QuestionConfiguration()
         question_conf.configuration()
 
-        QInstructions.download_instructions()
+        QInstructions.instructions_download()
 
         question_assistant = QuestionAssistant(self._generate_event())
         question_assistant.event_download_questions()

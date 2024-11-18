@@ -29,7 +29,7 @@ class QuestionsUploader:
         question_conf = QuestionConfiguration()
         question_conf.configuration()
 
-        QInstructions.upload_instructions()
+        QInstructions.instructions_upload()
         QuestionUploader.file_upload()
 
         question_assistant = QuestionAssistant(self._generate_event())

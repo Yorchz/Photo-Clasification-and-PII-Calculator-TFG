@@ -5,6 +5,8 @@ from views.model.components.ModelConfiguration import ModelConfiguration
 from views.model.components.ModelInstructions import ModelInstructions
 from views.model.components.ModelSession import ModelSession
 
+from streamlit_webapp.webapp.views.model.components.ModelAssistant import ModelAssistant
+
 
 class Model:
 
@@ -33,6 +35,8 @@ class Model:
 
         ModelInstructions.instructions()
 
-        print(f"{self._generate_event()['model_name']}, {self._generate_event()['model_type']}")
+        model_assistant = ModelAssistant(self._generate_event())
+        model_assistant.event_generate_data()
+
 
 
