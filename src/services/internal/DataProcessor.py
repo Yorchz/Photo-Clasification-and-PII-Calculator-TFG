@@ -5,8 +5,8 @@ import os
 class DataProcessor:
     """Handles data processing tasks like prompt generation and CSV operations."""
 
-    def __init__(self, config):
-        self.csv_path = config['csv_path']
+    def __init__(self, config, store_name):
+        self.csv_path = config['out_info_path'] + "/" + store_name + ".csv"
         self.headers = config['headers']
         self.initialize_csv()
 
