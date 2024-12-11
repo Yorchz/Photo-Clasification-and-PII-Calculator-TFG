@@ -8,6 +8,7 @@ class YamlDataTransformer:
         yaml_data = {}
         for condition, details in self.parsed_data.items():
             question_id, value = condition.split("=")
+            value = value.lower()
             if question_id not in yaml_data:
                 yaml_data[question_id] = {"conditions": []}
             yaml_data[question_id]["conditions"].append({
@@ -16,3 +17,4 @@ class YamlDataTransformer:
                 "inherited_skip": details["inherited_skip"]
             })
         return yaml_data
+

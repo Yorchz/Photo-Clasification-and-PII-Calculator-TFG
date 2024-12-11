@@ -7,10 +7,7 @@ class ModelService:
     @staticmethod
     def run(model_name, model_type):
         model_controller = MainOrchestrator(CONFIG, model_name, model_type)
-        try:
-            model_controller.run()
-            return True
-        except Exception as e:
-            print(f"Error al cargar las preguntas: {e}")
-            return False
+        execution_time = model_controller.run()
+        return execution_time
+
 

@@ -3,7 +3,7 @@ from src.controllers.ModelTrainingController import ModelTrainingController
 from src.controllers.QuestionController import QuestionController
 from src.services.internal.DataProcessor import DataProcessor
 from src.handlers.questions.QuestionHandler import QuestionHandler
-
+import time
 
 class MainOrchestrator:
     """Main orchestrator to handle different processes."""
@@ -27,6 +27,8 @@ class MainOrchestrator:
 
         question_handler = QuestionHandler(self.config['data'].get('question_flow_yaml'), prompts, self.model_training_controller)
 
+        start_time = time.time()
+
         for idx, (image, label) in enumerate(zip(images, labels)):
             answers = question_handler.process_image(image)
 
@@ -35,5 +37,7 @@ class MainOrchestrator:
             print(f"Processing image {idx + 1}/{len(images)}")
 
         print("Process completed successfully.")
+
+        return time.time() - start_time
 
 
