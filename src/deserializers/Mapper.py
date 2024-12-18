@@ -1,6 +1,6 @@
-from src.models.ActivityQuestion import ActivityQuestion
-from src.models.ContextQuestion import ContextQuestion
-from src.models.SubjectQuestion import SubjectQuestion
+from src.questions.ActivityQuestion import ActivityQuestion
+from src.questions.ContextQuestion import ContextQuestion
+from src.questions.SubjectQuestion import SubjectQuestion
 
 
 class Mapper:
