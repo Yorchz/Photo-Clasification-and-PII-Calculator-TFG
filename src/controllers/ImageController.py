@@ -17,6 +17,10 @@ class ImageController:
     def load_images(self):
         return self.hf_service.load_dataset()
 
+    def delete_images(self):
+        self.hf_service.delete_all_images()
+
+
     def download_images_zip(self, zip_name="imagenes.zip"):
         zip_buffer = self.hf_service.download_images()
 

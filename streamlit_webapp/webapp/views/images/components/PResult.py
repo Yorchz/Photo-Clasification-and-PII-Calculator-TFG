@@ -16,3 +16,10 @@ class PResult:
             st.write(f"Se han descagado las imagenes de la base de datos")
         else:
             st.warning("No se pudo realizar la descarga. Verifique el archivo/s e intente nuevamente.")
+
+    @staticmethod
+    def delete_result(response: bool):
+        if response:
+            st.write(f"Se han eliminado las imagenes de la base de datos")
+        else:
+            st.warning("No se pudo realizar el borrado. Verifique el archivo/s e intente nuevamente.")

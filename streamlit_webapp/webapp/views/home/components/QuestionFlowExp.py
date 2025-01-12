@@ -17,11 +17,11 @@ class QuestionsFlowExp:
         st.markdown(
             f"""
                <div class="card">
-                <strong>Resumidor de Textos</strong><br>
-                   <img src="data:image/png;base64,{self.encode_image()}" class="card-img"">
-                   <div class="card-content">
-                       Genera resúmenes concisos a partir de textos largos, facilitando la comprensión rápida de la información.
-                       Ejemplos de uso: generación de resúmenes de documentos, artículos, diarios de sesión, etc.
+                <strong>Flujo de Preguntas</strong><br>
+                   <img src="data:image/png;base64,{self.encode_image()}" class="card-img">
+                   <div class="card-content" style="text-align: justify;">
+                       En este apartado se gestiona el flujo lógico de las preguntas, permitiendo omitir aquellas irrelevantes según las respuestas dadas. 
+                       Además, el flujo puede descargarse, modificarse y volver a cargarse para garantizar un proceso más eficiente y adaptado.
                    </div>
                </div>
                """,

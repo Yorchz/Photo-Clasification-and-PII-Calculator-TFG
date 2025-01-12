@@ -17,11 +17,11 @@ class ModelExp:
         st.markdown(
             f"""
                <div class="card">
-                <strong>Resumidor de Textos</strong><br>
+                <strong>Ejecución del Modelo</strong><br>
                    <img src="data:image/png;base64,{self.encode_image()}" class="card-img">
-                   <div class="card-content">
-                       Genera resúmenes concisos a partir de textos largos, facilitando la comprensión rápida de la información.
-                       Ejemplos de uso: generación de resúmenes de documentos, artículos, diarios de sesión, etc.
+                   <div class="card-content" style="text-align: justify;">
+                       Permite ejecutar el modelo utilizando las imágenes y preguntas proporcionadas. Si todo está correctamente configurado, 
+                       genera un archivo CSV con la clasificación de las imágenes, que se guarda automáticamente para su uso posterior.
                    </div>
                </div>
                """,

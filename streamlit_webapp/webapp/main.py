@@ -1,7 +1,6 @@
 import base64
 import os
 import streamlit as st
-
 from static_components.SideBar import SideBar
 from views.images.ImageDownloader import ImageDownloader
 from views.images.ImageUploader import ImageUploader

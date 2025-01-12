@@ -17,13 +17,15 @@ class QuestionsExp:
         st.markdown(
             f"""
                <div class="card">
-                <strong>Resumidor de Textos</strong><br>
+                <strong>Control de Preguntas</strong><br>
                    <img src="data:image/png;base64,{self.encode_image()}" class="card-img">
-                   <div class="card-content">
-                       Genera resúmenes concisos a partir de textos largos, facilitando la comprensión rápida de la información.
-                       Ejemplos de uso: generación de resúmenes de documentos, artículos, diarios de sesión, etc.
+                   <div class="card-content" style="text-align: justify;">
+                       Esta sección permite subir y descargar preguntas, modificarlas según las necesidades del usuario, 
+                       y gestionar su uso de forma flexible y personalizable, adaptándose a diferentes escenarios y proyectos.
                    </div>
                </div>
                """,
             unsafe_allow_html=True
         )
+
+

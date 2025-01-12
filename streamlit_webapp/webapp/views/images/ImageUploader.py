@@ -31,4 +31,10 @@ class ImageUploader:
         DirectoryImageUploader.images_upload()
 
         image_assistant = ImageAssistant(self._generate_event())
-        image_assistant.event_upload_images()
+
+        col1, col2 = st.columns([1, 1])
+        with col1:
+            image_assistant.event_upload_images()
+        with col2:
+            image_assistant.event_delete_images()
+

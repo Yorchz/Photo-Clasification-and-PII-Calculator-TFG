@@ -1,8 +1,7 @@
 import streamlit as st
-
+from src.services.api.ImageDeleteService import ImageDeleteService
 from src.services.api.ImageDownloaderService import ImageDownloaderService
 from src.services.api.ImageUploaderService import ImageUploaderService
-from views.questions_flow.components.FResult import FResult
 from views.images.components.PResult import PResult
 
 
@@ -12,6 +11,7 @@ class ImageAssistant:
         self.images = event['images']
         self.image_uploader_service = ImageUploaderService()
         self.image_download_service = ImageDownloaderService()
+        self.images_delete_service = ImageDeleteService()
 
 
     def event_upload_images(self):
@@ -29,7 +29,10 @@ class ImageAssistant:
             response = self.image_download_service.download()
             PResult.download_result(response)
 
-
+    def event_delete_images(self):
+        if st.button("Borrar Imagenes de la Base de Datos"):
+            response = self.images_delete_service.delete()
+            PResult.delete_result(response)
 
     def _check_inputs_status(self):
         file_status = self.images is None
