@@ -4,8 +4,7 @@ from views.model.components.Title import Title
 from views.model.components.ModelConfiguration import ModelConfiguration
 from views.model.components.ModelInstructions import ModelInstructions
 from views.model.components.ModelSession import ModelSession
-
-from streamlit_webapp.webapp.views.model.components.ModelAssistant import ModelAssistant
+from views.model.components.ModelAssistant import ModelAssistant
 
 
 class Model:

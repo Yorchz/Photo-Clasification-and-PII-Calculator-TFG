@@ -1,6 +1,8 @@
 import zipfile
 from io import BytesIO
-from huggingface_hub import HfApi
+from huggingface_hub import HfApi, delete_repo
+
+from src.data_access.huggingface.HuggingFaceErased import HuggingFaceErased
 from src.data_access.huggingface.HuggingFaceLoader import HuggingFaceLoader
 from src.data_access.huggingface.HuggingFaceUploader import HuggingFaceUploader
 
@@ -33,16 +35,13 @@ class HuggingFaceService:
         return zip_buffer
 
     def delete_all_images(self):
-        """Deletes all content in the Hugging Face dataset repository."""
+        delete = HuggingFaceErased(self.repo_name, self.token)
         try:
-            self.api.delete_repo(repo_id=self.repo_name, repo_type="dataset", token=self.token)
-            print(f"Repository {self.repo_name} deleted successfully.")
-
-            self.api.create_repo(repo_id=self.repo_name, repo_type="dataset", token=self.token, exist_ok=True)
-            print(f"Repository {self.repo_name} recreated as empty.")
+            delete.delete_images()
+            print(f"El repositorio '{self.repo_name}' ha sido eliminado correctamente.")
         except Exception as e:
-            print(f"Failed to delete repository {self.repo_name}: {e}")
-            
+            print(f"Error al eliminar el repositorio: {e}")
+
     @staticmethod
     def _create_zip_buffer(images, labels):
         zip_buffer = BytesIO()

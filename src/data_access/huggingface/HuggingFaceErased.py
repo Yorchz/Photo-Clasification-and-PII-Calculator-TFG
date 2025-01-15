@@ -1,0 +1,12 @@
+from huggingface_hub import delete_repo
+
+
+class HuggingFaceErased:
+
+    def __init__(self, repo_name: str, token: str = None):
+        self.repo_name = repo_name
+        self.token = token
+
+    def delete_images(self):
+        print(self.token, self.repo_name)
+        delete_repo(repo_id=self.repo_name, repo_type="dataset", token=self.token)

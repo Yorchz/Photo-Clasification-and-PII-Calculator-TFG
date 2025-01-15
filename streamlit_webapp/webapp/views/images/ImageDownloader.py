@@ -27,8 +27,8 @@ class ImageDownloader:
 
         image_assistant = ImageAssistant(self._generate_event())
 
-        col1, col2 = st.columns([1, 1])
+        col1, col2, col3 = st.columns([1, 0.5, 1])
         with col1:
             image_assistant.event_download_images()
-        with col2:
+        with col3:
             image_assistant.event_delete_images()
