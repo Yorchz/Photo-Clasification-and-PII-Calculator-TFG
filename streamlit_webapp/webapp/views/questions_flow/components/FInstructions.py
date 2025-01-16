@@ -30,12 +30,12 @@ class FInstructions:
     @staticmethod
     def instructions_download():
         st.markdown("""
-                <div class='instructions-container'>
-                    <h5 style="font-size: 18px;">Estás usando un resumidor para datos del Boletin Oficial de Canarias. Está orientado a realizar resumenes sobre este, así que aquí tienes unos consejos para obtener el máximo rendimiento:</h5>
-                    <ul style="list-style-type: disc;">
-                        <li style="font-size: 14px;">Sé lo más específico posible al realizar una petición, usando un lenguaje neutro y claro.</li>
-                        <li style="font-size: 14px;">El porcentaje hace referencia a la longitud del resumen de salida.</li>
-                        <li style="font-size: 14px;">El máximo de tokens son el límite de palabras que el modelo utiliza para generar una respuesta. Es útil para controlar la longitud y la complejidad de las respuestas, asegurando que sean concisas y relevantes.</li>
-                    </ul>
-                </div>
-            """, unsafe_allow_html=True)
+            <div class='instructions-container'>
+                <h5 style="font-size: 18px;">Descarga del Flujo de Preguntas</h5>
+                <ul style="list-style-type: disc;">
+                    <li style="font-size: 14px;">La descarga del flujo de preguntas es un proceso sencillo. Solo debes hacer clic en el botón de descarga disponible en esta sección.</li>
+                    <li style="font-size: 14px;">El archivo se guardará automáticamente en tu carpeta de descargas con un nombre que incluye la fecha y hora actuales, facilitando su identificación.</li>
+                    <li style="font-size: 14px;">Puedes utilizar este archivo para consultarlo, modificar las reglas o cargarlo nuevamente tras realizar los cambios necesarios.</li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
