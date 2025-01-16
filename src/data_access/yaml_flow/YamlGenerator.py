@@ -1,4 +1,3 @@
-# src/generator.py
 import yaml
 
 class YamlGenerator:

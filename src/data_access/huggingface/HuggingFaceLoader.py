@@ -6,7 +6,7 @@ from datasets import load_dataset
 class HuggingFaceLoader:
     """Loader to retrieve datasets from Hugging Face."""
 
-    def __init__(self, repo_name: str, token: str = None):
+    def __init__(self, repo_name: str, token: str):
         self.repo_name = repo_name
         self.token = token
 

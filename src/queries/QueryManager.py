@@ -2,9 +2,9 @@ class QueryManager:
     """Manages queries for data retrieval."""
 
     _queries = {
-        "Subject": {"title": "Subject_categorization"},
-        "Activity": {"title": "Represented_activities_categorization"},
-        "Context": {"title": "Context_categorization"},
+        "Subject_categorization": {"title": "Subject_categorization"},
+        "Represented_activities_categorization": {"title": "Represented_activities_categorization"},
+        "Context_categorization": {"title": "Context_categorization"},
     }
 
     @staticmethod

@@ -29,8 +29,12 @@ class QuestionDataOrchestrator:
         question_instance = Deserializer.deserialize(self.question_data, cls)
         return question_instance
 
-    def update_questions_from_text(self, text_file_path: str):
-        parser = TextFileParser(text_file_path)
-        data = parser.get_data()
+    def update_questions_from_text(self, file_content, selection):
+        data = TextFileParser(file_content=file_content, selection=selection).json_parse_content()
         self.uploader.upload_data(data)
-        print(f"Data from {text_file_path} has been uploaded to MongoDB.")
+        print("Data has been uploaded to MongoDB.")
+
+    def download_questions_from_db(self, selection, query):
+        print(f"La seleccion {selection} \n")
+        data = TextFileParser(selection=selection, questions=query).txt_parse_content()
+        return data

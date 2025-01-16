@@ -15,20 +15,10 @@ CONFIG = {
     },
     'data': {
         'csv_path': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'results', 'results.csv')),
-        'image_dir': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'images')),
 
-        'question_flow_yaml': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'src', 'config', 'question_flow.yaml')),
+        'question_flow_yaml': os.path.abspath(os.path.join(os.getcwd(), 'src', 'config', 'question_flow.yaml')),
 
-        'actv_questions': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'questions_txt',
-                                                       'Represented_activities_categorization.txt')),
-        'subj_questions': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'questions_txt',
-                                                       'Subject_categorization.txt')),
-        'cont_questions': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'questions_txt',
-                                                       'Context_categorization.txt')),
-        'question_flow_txt': os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'modeling', 'question_flow',
-                                                                       'Question_flow.txt')),
-
-
+        'out_info_path': os.path.abspath(os.path.join(os.getcwd(), '..', '..', '..', 'Downloads')),
 
         'headers': ["Image_Id","Num_People","Role","Gender","Category","Age_Categories","Travel_Group","Activity_Type",
                     "Activity_Done","Natural_Resources","Resource_Types","Flora_Types","Fauna_Types","Landscape_Types",

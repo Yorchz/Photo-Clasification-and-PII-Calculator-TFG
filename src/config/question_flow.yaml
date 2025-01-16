@@ -13,7 +13,7 @@ question_flow:
       inherited_skip: true
   context1:
     conditions:
-    - condition: value == 'No'
+    - condition: value == 'no'
       skip_questions:
       - context2
       - context3
@@ -39,7 +39,7 @@ question_flow:
       inherited_skip: false
   context6:
     conditions:
-    - condition: value == 'No'
+    - condition: value == 'no'
       skip_questions:
       - context7
       - context8
@@ -65,7 +65,7 @@ question_flow:
       inherited_skip: false
   context11:
     conditions:
-    - condition: value == 'No'
+    - condition: value == 'no'
       skip_questions:
       - context12
       - context13
@@ -91,13 +91,13 @@ question_flow:
       inherited_skip: false
   context16:
     conditions:
-    - condition: value == 'No'
+    - condition: value == 'no'
       skip_questions:
       - context17
       inherited_skip: true
   context18:
     conditions:
-    - condition: value == 'No'
+    - condition: value == 'no'
       skip_questions:
       - context19
       inherited_skip: true

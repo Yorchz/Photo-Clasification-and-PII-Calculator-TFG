@@ -5,8 +5,8 @@ import os
 class DataProcessor:
     """Handles data processing tasks like prompt generation and CSV operations."""
 
-    def __init__(self, config):
-        self.csv_path = config['csv_path']
+    def __init__(self, config, store_name):
+        self.csv_path = config['out_info_path'] + "/" + store_name + ".csv"
         self.headers = config['headers']
         self.initialize_csv()
 
@@ -25,16 +25,13 @@ class DataProcessor:
         return prompts
 
     def _clean_answers(self, answers):
-        """Reemplaza None por 'NONE' en las respuestas."""
         return ['NONE' if answer is None else answer for answer in answers]
 
     def _build_dataframe(self, label, answers):
-        """Construye un DataFrame a partir de una etiqueta y respuestas."""
         data = [label] + answers
         return pd.DataFrame([data], columns=self.headers)
 
     def _read_and_combine_csv(self, df):
-        """Lee el CSV existente y combina los datos con el nuevo DataFrame."""
         if os.path.exists(self.csv_path):
             df_existing = pd.read_csv(self.csv_path)
             return pd.concat([df_existing, df], ignore_index=True)
@@ -42,7 +39,6 @@ class DataProcessor:
             return df
 
     def save_to_csv(self, label, answers):
-        """Llama a las funciones auxiliares para procesar y guardar los datos en el CSV."""
         answers = self._clean_answers(answers)
 
         df = self._build_dataframe(label, answers)

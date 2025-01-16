@@ -21,9 +21,11 @@ class QuestionHandler:
 
             answer = self.model_training_controller.generate_answer(image,
                                                                     prompt)
-            answers[key] = answer
+            normalized_answer = answer.lower() if isinstance(answer, str) else answer
 
-            next_skip = self.flow_manager.get_next_questions(key, answer)
+            answers[key] = normalized_answer
+
+            next_skip = self.flow_manager.get_next_questions(key, normalized_answer)
             if next_skip:
                 self.skip_questions.update(next_skip)
 
