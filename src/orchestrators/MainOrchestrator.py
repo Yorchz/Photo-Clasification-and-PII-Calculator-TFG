@@ -8,14 +8,16 @@ import time
 class MainOrchestrator:
     """Main orchestrator to handle different processes."""
 
-    def __init__(self,config, model_name: str, model_type: str):
+    def __init__(self,config, model_name: str, model_type: str, stop_flag: bool):
         self.config = config
         self.store_name = f"{model_name}_{model_type}"
         self.question_controller = QuestionController(config['mongodb'])
         self.image_controller = ImageController(config)
         self.model_training_controller = ModelTrainingController(model_name, model_type)
         self.data_processor = DataProcessor(config['data'], self.store_name)
+        self.stop_flag = stop_flag
 
+    @property
     def run(self):
         subjects = self.question_controller.load_questions('Subject_categorization')
         activities = self.question_controller.load_questions('Represented_activities_categorization')
@@ -30,8 +32,11 @@ class MainOrchestrator:
         start_time = time.time()
 
         for idx, (image, label) in enumerate(zip(images, labels)):
-            answers = question_handler.process_image(image)
 
+            if self.stop_flag():
+                break
+
+            answers = question_handler.process_image(image)
             ordered_answers = [answers[key] for key in prompts.keys()]
             self.data_processor.save_to_csv(label, ordered_answers)
             print(f"Processing image {idx + 1}/{len(images)}")
