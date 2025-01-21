@@ -11,10 +11,9 @@ class ModelAssistant:
         self.model_controller = ModelService()
 
 
-
     def event_generate_data(self):
 
-        col1, col2, col3 = st.columns([1, 0.5, 1])
+        col1, col2, col3 = st.columns([1, 2.2, 1])
         with col1:
             if st.button("Generar datos"):
                 st.session_state.stop_requested = False
