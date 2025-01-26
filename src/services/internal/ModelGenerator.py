@@ -20,6 +20,7 @@ class ModelGenerator:
         return model, vis_processors, txt_processors
 
     def generate_answer(self, image_path, prompt):
+        print(prompt)
         image = image_path.convert('RGB').resize((400, 300))
         image_tensor = self.vis_processors["eval"](image).unsqueeze(0).to(self.device)
         answer = self.model_generate(image_tensor, prompt)

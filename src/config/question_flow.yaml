@@ -1,13 +1,14 @@
 question_flow:
   subject1:
     conditions:
-    - condition: value == '0'
+    - condition: value == 'no'
       skip_questions:
       - subject2
       - subject3
       - subject4
       - subject5
       - subject6
+      - subject7
       - action1
       - action2
       inherited_skip: true

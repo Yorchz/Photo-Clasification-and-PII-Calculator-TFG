@@ -9,3 +9,4 @@ class SubjectQuestion:
     question4: str = None
     question5: str = None
     question6: str = None
+    question7: str = None

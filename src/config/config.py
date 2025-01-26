@@ -20,14 +20,10 @@ CONFIG = {
 
         'out_info_path': os.path.abspath(os.path.join(os.getcwd(), '..', '..', '..', 'Downloads')),
 
-        'headers': ["Image_Id","Num_People","Role","Gender","Category","Age_Categories","Travel_Group","Activity_Type",
+        'headers': ["Image_Id","People","Num_People","Role","Gender","Category","Age_Categories","Travel_Group","Activity_Type",
                     "Activity_Done","Natural_Resources","Resource_Types","Flora_Types","Fauna_Types","Landscape_Types",
                     "Tourist_Resources","Tourist_Resource_Types","Heritage_Types","Cultural_Elements","Gastronomy_Types",
                     "Recreational_Products","Leisure_Activities","Leisure_Types","Sports_Types","Shopping_Facilities",
                     "Accommodation","Accommodation_Types","Infrastructures","Infrastructure_Types"],
     },
-    'model': {
-        'model_name': 'blip2_t5',
-        'model_type': 'pretrain_flant5xxl',
-    }
 }
