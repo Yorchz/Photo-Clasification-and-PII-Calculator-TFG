@@ -1,5 +1,4 @@
 class MongoDBLoader:
-    """Loader for MongoDB operations."""
 
     def __init__(self, client, db_name: str):
         self.client = client

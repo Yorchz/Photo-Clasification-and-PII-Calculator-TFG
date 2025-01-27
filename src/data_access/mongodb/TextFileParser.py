@@ -5,7 +5,6 @@ from src.config.config import CONFIG
 
 
 class TextFileParser:
-    """Parses text files containing questions."""
 
     def __init__(self, file_content = None, selection = None, questions = None):
         self.file_content = file_content

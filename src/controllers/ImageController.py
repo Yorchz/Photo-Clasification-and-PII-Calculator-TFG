@@ -5,7 +5,6 @@ from src.services.internal.HuggingFaceService import HuggingFaceService
 
 
 class ImageController:
-    """Controller to handle image-related operations."""
 
     def __init__(self, config):
         self.hf_service = HuggingFaceService(config['huggingface'])

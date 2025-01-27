@@ -5,7 +5,6 @@ from src.handlers.models.model_factory.Factory import Factory
 
 
 class ModelGenerator:
-    """Generates answers using the trained model."""
 
     def __init__(self, model_name: str, model_type: str):
         self.device = str(torch.device("cuda") if torch.cuda.is_available() else "cpu")

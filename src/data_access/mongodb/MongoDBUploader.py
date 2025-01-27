@@ -1,5 +1,4 @@
 class MongoDBUploader:
-    """Uploader for MongoDB data."""
 
     def __init__(self, client, db_name: str):
         self.client = client

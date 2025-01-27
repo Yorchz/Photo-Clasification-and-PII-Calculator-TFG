@@ -5,7 +5,6 @@ from src.queries.QueryManager import QueryManager
 
 
 class QuestionDataOrchestrator:
-    """Orchestrator to manage question data."""
 
     def __init__(self, mongodb_service):
         self.query_manager = QueryManager()

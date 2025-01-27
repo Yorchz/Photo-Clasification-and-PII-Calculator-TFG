@@ -1,5 +1,4 @@
 class QueryManager:
-    """Manages queries for data retrieval."""
 
     _queries = {
         "Subject_categorization": {"title": "Subject_categorization"},

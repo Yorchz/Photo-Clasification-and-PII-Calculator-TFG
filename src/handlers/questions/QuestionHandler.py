@@ -1,7 +1,6 @@
 from src.controllers.QuestionFlowManager import QuestionFlowManager
 
 class QuestionHandler:
-    """Handles the question flow, including generating answers and deciding which questions to skip."""
 
     def __init__(self, flow_config_path, prompts, model_training_controller):
         self.flow_manager = QuestionFlowManager(flow_config_path)
@@ -10,7 +9,6 @@ class QuestionHandler:
         self.skip_questions = set()
 
     def process_image(self, image):
-        """Processes an image, generates answers for prompts and handles skipped questions."""
         answers = {}
         self.skip_questions = set()
 

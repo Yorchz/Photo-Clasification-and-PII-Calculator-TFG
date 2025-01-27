@@ -1,5 +1,4 @@
 class ConditionEvaluator:
-    """Evaluates conditions in a controlled manner."""
 
     @staticmethod
     def evaluate_condition(condition: str, value: str) -> bool:

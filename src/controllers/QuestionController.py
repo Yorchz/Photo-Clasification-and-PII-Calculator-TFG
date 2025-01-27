@@ -4,7 +4,6 @@ from src.services.internal.MongoDBService import MongoDBService
 
 
 class QuestionController:
-    """Controller to handle question data operations."""
 
     def __init__(self, config):
         self.mongodb_service = MongoDBService(config)

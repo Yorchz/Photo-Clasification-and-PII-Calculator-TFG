@@ -2,7 +2,6 @@ from src.services.internal.ModelGenerator import ModelGenerator
 
 
 class ModelTrainingController:
-    """Controller for model training and inference operations."""
 
     def __init__(self, model_name: str, model_type: str):
         self.model_generator = ModelGenerator(model_name, model_type)

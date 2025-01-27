@@ -1,5 +1,4 @@
 class Deserializer:
-    """Deserializes data into objects."""
 
     @staticmethod
     def deserialize(data: dict, cls: type):

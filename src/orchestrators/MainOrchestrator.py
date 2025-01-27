@@ -6,7 +6,6 @@ from src.handlers.questions.QuestionHandler import QuestionHandler
 import time
 
 class MainOrchestrator:
-    """Main orchestrator to handle different processes."""
 
     def __init__(self,config, model_name: str, model_type: str, stop_flag: bool):
         self.config = config

@@ -10,7 +10,6 @@ class HuggingFaceUploader:
         self.api = HfApi()
 
     def _repo_exists(self) -> bool:
-        """Verifica si el repositorio ya existe en Hugging Face."""
         try:
             self.api.repo_info(repo_id=self.repo_name, repo_type="dataset", token=self.token)
             return True
@@ -19,11 +18,9 @@ class HuggingFaceUploader:
                 return False
 
     def _create_repo(self):
-        """Crea un repositorio en Hugging Face si no existe."""
         self.api.create_repo(repo_id=self.repo_name, repo_type="dataset", token=self.token, exist_ok=True)
 
     def _get_or_create_repo(self):
-        """Carga el dataset si el repositorio existe, o crea el repositorio si no existe."""
         if not self._repo_exists():
             self._create_repo()
             return None

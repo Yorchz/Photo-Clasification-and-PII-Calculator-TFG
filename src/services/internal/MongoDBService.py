@@ -4,7 +4,6 @@ from src.data_access.mongodb.MongoDBUploader import MongoDBUploader
 
 
 class MongoDBService:
-    """Service to manage MongoDB operations."""
 
     def __init__(self, config):
         self.connection = MongoDBConnection(config['host'], config['port'])

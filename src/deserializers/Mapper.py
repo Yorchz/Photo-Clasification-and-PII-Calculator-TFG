@@ -4,7 +4,6 @@ from src.questions.SubjectQuestion import SubjectQuestion
 
 
 class Mapper:
-    """Maps keys to classes."""
 
     _map = {
         "Represented_activities_categorization": ActivityQuestion,

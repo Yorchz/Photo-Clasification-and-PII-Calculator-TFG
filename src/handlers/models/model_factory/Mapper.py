@@ -4,7 +4,6 @@ from src.handlers.models.ModelPnpVqaHandler import ModelPnpVqaHandler
 
 
 class Mapper:
-    """Maps keys to classes."""
 
     _map = {
         "blip2_t5_pretrain_flant5xl": ModelBlip2BHandler,

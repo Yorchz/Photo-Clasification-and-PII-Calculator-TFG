@@ -2,7 +2,6 @@ import pymongo
 
 
 class MongoDBConnection:
-    """Manages MongoDB connections using host and port."""
 
     def __init__(self, host: str, port: int):
         self.host = host

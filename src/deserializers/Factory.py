@@ -2,7 +2,6 @@ from src.deserializers.Mapper import Mapper
 
 
 class Factory:
-    """Factory to initialize classes based on a key."""
 
     @staticmethod
     def initialize_class(key: str) -> type:
