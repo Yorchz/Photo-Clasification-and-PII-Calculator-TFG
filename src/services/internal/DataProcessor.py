@@ -1,11 +1,13 @@
 import pandas as pd
+import random
 import os
 
 
 class DataProcessor:
 
     def __init__(self, config, store_name):
-        self.csv_path = config['out_info_path'] + "/" + store_name + ".csv"
+        random_number = random.randint(1000, 9999)
+        self.csv_path = f"{config['out_info_path']}/{store_name}_{random_number}.csv"
         self.headers = config['headers']
         self.initialize_csv()
 
