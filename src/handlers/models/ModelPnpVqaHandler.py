@@ -16,9 +16,3 @@ class ModelPnpVqaHandler(ModelHandler):
         pred_answers, _, _ = self.model.predict_answers(samples, num_captions=50, num_patches=20)
         return pred_answers[0]
 
-    def _match_img_q_gradcam(self, samples):
-        return self.model.forward_itm(samples=samples)
-
-    def _question_guided(self, samples):
-        return  self.model.forward_cap(samples=samples, num_captions=50, num_patches=20)
-
