@@ -28,8 +28,13 @@ class DataProcessor:
     def _clean_answers(self, answers):
         return ['NONE' if answer is None else answer for answer in answers]
 
+    def _extract_country_region(self, label):
+        parts = label.split("_")
+        return parts[2], parts[3]
+
     def _build_dataframe(self, label, answers):
-        data = [label] + answers
+        country, region = self._extract_country_region(label)  # Extraer país y región
+        data = [label, country, region] + answers
         return pd.DataFrame([data], columns=self.headers)
 
     def _read_and_combine_csv(self, df):
