@@ -14,12 +14,94 @@ question_flow:
       inherited_skip: true
   context1:
     conditions:
-    - condition: value == 'no'
+    - condition: value == 'natural resource'
+      skip_questions:
+      - context6
+      - context7
+      - context8
+      - context9
+      - context10
+      - context11
+      - context12
+      - context13
+      - context14
+      - context15
+      inherited_skip: true
+    - condition: value == 'tourist attraction'
       skip_questions:
       - context2
       - context3
       - context4
       - context5
+      - context6
+      - context10
+      - context11
+      - context12
+      - context13
+      - context14
+      - context15
+      inherited_skip: true
+    - condition: value == 'leisure and recreation'
+      skip_questions:
+      - context2
+      - context3
+      - context4
+      - context5
+      - context6
+      - context7
+      - context8
+      - context9
+      - context14
+      - context15
+      inherited_skip: true
+    - condition: value == 'lodging facility'
+      skip_questions:
+      - context2
+      - context3
+      - context4
+      - context5
+      - context6
+      - context7
+      - context8
+      - context9
+      - context10
+      - context11
+      - context12
+      - context13
+      - context15
+      inherited_skip: true
+    - condition: value == 'infrastructure'
+      skip_questions:
+      - context2
+      - context3
+      - context4
+      - context5
+      - context6
+      - context7
+      - context8
+      - context9
+      - context10
+      - context11
+      - context12
+      - context13
+      - context14
+      inherited_skip: true
+    - condition: value == 'other'
+      skip_questions:
+      - context2
+      - context3
+      - context4
+      - context5
+      - context6
+      - context7
+      - context8
+      - context9
+      - context10
+      - context11
+      - context12
+      - context13
+      - context14
+      - context15
       inherited_skip: true
   context2:
     conditions:
@@ -40,65 +122,35 @@ question_flow:
       inherited_skip: false
   context6:
     conditions:
-    - condition: value == 'no'
-      skip_questions:
-      - context7
-      - context8
-      - context9
-      - context10
-      inherited_skip: true
-  context7:
-    conditions:
     - condition: value == 'heritage'
       skip_questions:
+      - context8
       - context9
-      - context10
       inherited_skip: false
     - condition: value == 'culture'
       skip_questions:
-      - context8
-      - context10
+      - context7
+      - context9
       inherited_skip: false
     - condition: value == 'gastronomy'
       skip_questions:
+      - context7
       - context8
-      - context9
       inherited_skip: false
-  context11:
-    conditions:
-    - condition: value == 'no'
-      skip_questions:
-      - context12
-      - context13
-      - context14
-      - context15
-      inherited_skip: true
-  context12:
+  context10:
     conditions:
     - condition: value == 'other leisure activities'
       skip_questions:
-      - context14
-      - context15
+      - context12
+      - context13
       inherited_skip: false
     - condition: value == 'sports'
       skip_questions:
+      - context11
       - context13
-      - context15
       inherited_skip: false
     - condition: value == 'shopping'
       skip_questions:
-      - context13
-      - context14
+      - context11
+      - context12
       inherited_skip: false
-  context16:
-    conditions:
-    - condition: value == 'no'
-      skip_questions:
-      - context17
-      inherited_skip: true
-  context18:
-    conditions:
-    - condition: value == 'no'
-      skip_questions:
-      - context19
-      inherited_skip: true

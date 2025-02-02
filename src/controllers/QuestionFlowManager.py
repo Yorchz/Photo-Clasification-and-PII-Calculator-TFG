@@ -16,8 +16,8 @@ class QuestionFlowManager:
             for condition in current_flow.get('conditions', []):
                 print(f'Condición a evaluar: {condition}')
 
-                if ConditionEvaluator.evaluate_condition(condition['condition'], answer[0].lower()):
-                    print(f'Condición {condition["condition"]} evaluada como verdadera con respuesta {answer[0]}')
+                if ConditionEvaluator.evaluate_condition(condition['condition'], answer.lower()):
+                    print(f'Condición {condition["condition"]} evaluada como verdadera con respuesta {answer}')
                     return condition['skip_questions']
                 else:
                         print(f'Condición {condition["condition"]} evaluada como falsa. No se saltan preguntas.')
