@@ -8,5 +8,4 @@ class HuggingFaceErased:
         self.token = token
 
     def delete_images(self):
-        print(self.token, self.repo_name)
         delete_repo(repo_id=self.repo_name, repo_type="dataset", token=self.token)

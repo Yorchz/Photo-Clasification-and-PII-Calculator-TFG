@@ -11,8 +11,6 @@ class TextFileParser:
         self.selection = selection
         self.questions = questions
         self.out_phat = CONFIG['data']['out_info_path']
-        print(f"Ruta de descarga {self.out_phat}\n")
-        print(f"Contenido de preguntas {self.questions}\n")
 
     def json_parse_content(self):
         print(f"\n Cpntenido decodificado {self.file_content}, selección {self.selection}\n")
@@ -34,7 +32,6 @@ class TextFileParser:
         for idx, (key, question_text) in enumerate(self.questions.__dict__.items(), start=1):
             formatted_questions.append(f"question{idx} - {question_text}")
 
-        print(formatted_questions)
 
         with open(os.path.join(self.out_phat, f"{self.selection}_{datetime.now().strftime('%Y%m%d')}.txt"),
                   'w', encoding='utf-8') as file:
