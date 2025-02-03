@@ -6,6 +6,8 @@ from views.projected_img.components.Subtitle import Subtitle
 from views.projected_img.components.Title import Title
 from views.projected_img.components.ImgProjectedReader import ImgProjectedReader
 
+from streamlit_webapp.webapp.views.projected_img.components.ImgProjectedAssistant import ImgProjectedAssistant
+
 
 class ImgProjected:
 
@@ -31,6 +33,9 @@ class ImgProjected:
         ImgProjectedInstructions.instructions()
 
         ImgProjectedReader.file_upload()
+
+        img_projected_assistant = ImgProjectedAssistant(self._generate_event())
+        img_projected_assistant.event_generate_img_projection()
 
 
 

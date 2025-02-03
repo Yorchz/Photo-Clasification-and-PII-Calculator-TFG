@@ -25,5 +25,16 @@ CONFIG = {
                     "Fauna_Types","Landscape_Types","Tourist_Resource_Types","Heritage_Types","Cultural_Elements",
                     "Gastronomy_Types","Leisure_Activities","Leisure_Types","Sports_Types","Shopping_Facilities",
                     "Accommodation_Types","Infrastructure_Types"],
+        'conditions': {
+            'People': ['yes'],
+            'Role': ['primary', 'secondary'],
+            'Gender': ['male', 'female', 'other'],
+            'Category': ['tourists', 'locals', 'workers'],
+            'Age_Categories': ['children', 'young adults', 'adults', 'elderly'],
+            'Travel_Group': ['family', 'couple'],
+            'Activity_Type': ['active', 'passive'],
+            'Context_Type': ['tourist attraction', 'leisure and recreation', 'lodging facility', 'natural resource', 'infrastructure'],
+            'Resource_Types': ['flora', 'fauna', 'landscapes'],
+        },
     },
 }

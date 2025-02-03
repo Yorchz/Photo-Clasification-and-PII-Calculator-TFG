@@ -81,7 +81,7 @@ class MultiApp:
             model_app = Model()
             model_app.run()
 
-        elif menu_selection == 'Imagen Projectada':
+        elif menu_selection == '📽 Imagen Projectada':
             img_projected = ImgProjected()
             img_projected.run()
 
