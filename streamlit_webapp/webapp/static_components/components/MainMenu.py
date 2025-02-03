@@ -22,6 +22,7 @@ class MainMenu:
             }
         },
         '🖥️ Modelo': {'submenu': None},
+        'Imagen Projectada': {'submenu': None}
     }
 
     @staticmethod

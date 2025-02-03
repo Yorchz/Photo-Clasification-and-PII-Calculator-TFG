@@ -2,6 +2,7 @@ import base64
 import os
 import streamlit as st
 from static_components.SideBar import SideBar
+from views.projected_img.ImgProjected import ImgProjected
 from views.images.ImageDownloader import ImageDownloader
 from views.images.ImageUploader import ImageUploader
 from views.questions_flow.QFlowDownloader import QFlowDownloader
@@ -77,8 +78,12 @@ class MultiApp:
 
 
         elif menu_selection == '🖥️ Modelo':
-            modelo_app = Model()
-            modelo_app.run()
+            model_app = Model()
+            model_app.run()
+
+        elif menu_selection == 'Imagen Projectada':
+            img_projected = ImgProjected()
+            img_projected.run()
 
 
 if __name__ == "__main__":
