@@ -1,136 +1,73 @@
-# 🌍 VQA para Turismo - Análisis y Aplicación de Modelos Visual Question Answering
+# VQA Imagen Proyectada
 
 ![Proyecto](https://img.shields.io/badge/VQA-Turismo-blueviolet) ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Streamlit](https://img.shields.io/badge/Streamlit-App-red) ![Status](https://img.shields.io/badge/Estado-En%20desarrollo-orange)
 
-🚀 **Este repositorio contiene el código fuente de un sistema basado en modelos de Visual Question Answering (VQA) aplicado al análisis de imágenes turísticas.**  
-El objetivo principal del proyecto es evaluar la compatibilidad y desempeño de modelos VQA en el sector del turismo, explorando su capacidad para interpretar imágenes y generar respuestas en lenguaje natural.  
+## Descripción del Proyecto
 
-Esta aplicación permite gestionar imágenes turísticas, formular preguntas estructuradas y calcular el **Índice de Imagen Proyectada (PII)**, proporcionando herramientas analíticas para la gestión y promoción de destinos turísticos.  
+Este proyecto explora la aplicación de modelos de Visual Question Answering (VQA) en el ámbito del turismo para analizar la imagen proyectada de los destinos a través de fotografías. Se utilizan modelos avanzados de inteligencia artificial para extraer información de imágenes y calcular el Índice de Imagen Proyectada (PII), permitiendo una evaluación cuantitativa de la percepción turística. Este análisis proporciona información clave para la gestión de destinos turísticos, ayudando en la toma de decisiones estratégicas basadas en datos visuales. La herramienta desarrollada facilita el procesamiento y análisis de grandes volúmenes de imágenes, permitiendo generar reportes automatizados y proporcionando métricas cuantificables para la planificación turística.
 
----
+## Autores
+- **Jorge Hernández Hernández**
 
-## 🖥️ **Características Principales**
-✅ **Evaluación exhaustiva de modelos VQA** aplicados a imágenes del sector turístico.  
-✅ **Automatización del cálculo del PII**, cuantificando la imagen proyectada de los destinos turísticos.  
-✅ **Aplicación interactiva basada en Streamlit** para facilitar la experimentación con los modelos.  
-✅ **Comparación y análisis detallado de modelos VQA**, identificando sus fortalezas y debilidades en distintos escenarios.  
-✅ **Gestión eficiente de imágenes y preguntas** con almacenamiento en bases de datos en la nube.  
+## Tutores
+- **Jose Javier Lorenzo Navarro**
+- **Patricia Picazo Peral**
 
----
+## Objetivos del Proyecto
+- **Analizar la imagen proyectada en fotografías turísticas mediante modelos de VQA** para identificar patrones visuales relevantes en destinos turísticos.
+- **Evaluar la precisión de modelos de lenguaje-visión** en la identificación de características clave en imágenes, mejorando la fiabilidad de los análisis.
+- **Desarrollar una aplicación con una interfaz intuitiva** que permita a los usuarios cargar imágenes, realizar consultas y visualizar los resultados obtenidos por los modelos de VQA.
+- **Comparar distintos modelos VQA** para determinar cuál ofrece mejores resultados en la evaluación de imágenes turísticas.
+- **Crear una herramienta útil para investigadores y gestores de turismo**, permitiendo el análisis de tendencias y optimización de campañas de promoción.
 
-## 📌 **Estructura del Proyecto**
-```
-streamlit_webapp/
-│── .streamlit/             # Configuración de Streamlit
-│── assets/                 # Recursos gráficos y estáticos
-│── webapp/                 # Código principal de la aplicación
-│   ├── static_components/   # Componentes visuales de la UI
-│   ├── views/               # Diferentes vistas de la aplicación
-│   │   ├── home/            # Pantalla de inicio
-│   │   ├── images/          # Gestión de imágenes
-│   │   ├── model/           # Ejecución de modelos VQA
-│   │   ├── projected_img/   # Cálculo del PII
-│   │   ├── questions/       # Gestión de preguntas
-│   │   ├── questions_flow/  # Gestión del flujo de preguntas
-│   ├── main.py              # Entrada principal de la aplicación
-│── style.css                # Estilos personalizados
-```
+## Modelos Utilizados
+El proyecto emplea varios modelos de Visual Question Answering para analizar y clasificar imágenes:
+- **BLIP (Bootstrapping Language-Image Pretraining)**: Modelo basado en transformers que integra imagen y texto mediante aprendizaje contrastivo y generación de descripciones. Este modelo permite generar respuestas detalladas y contextualizadas basadas en el contenido visual.
+- **BLIP-2**: Optimización de BLIP con un mecanismo de alineación más eficiente entre imagen y texto, lo que permite una mejor comprensión multimodal y mayor precisión en respuestas generadas.
+- **PNP-VQA (Plug-and-Play Visual Question Answering)**: Modelo modular que combina visión y lenguaje sin necesidad de reentrenamiento, permitiendo una rápida integración y escalabilidad en distintos dominios.
 
----
+## Metodología
+Se sigue la metodología **CRISP-DM**, ampliamente utilizada en ciencia de datos, que proporciona una estructura clara para el desarrollo del proyecto:
+1. **Comprensión del negocio**: Se identifican las necesidades del sector turístico y se establece cómo el análisis de imágenes puede mejorar la gestión y promoción de destinos.
+2. **Comprensión de los datos**: Recopilación y exploración de imágenes turísticas provenientes de redes sociales, bancos de imágenes y fuentes institucionales.
+3. **Preparación de los datos**: Se lleva a cabo la limpieza de datos, etiquetado de imágenes y estructuración de información en bases de datos no relacionales.
+4. **Modelado**: Se implementan y evalúan distintos modelos de VQA para analizar la capacidad de respuesta de cada uno.
+5. **Evaluación**: Se comparan métricas de rendimiento para identificar el modelo más eficiente en términos de precisión y velocidad de respuesta.
+6. **Despliegue**: La herramienta se implementa como una aplicación web basada en Streamlit para facilitar su acceso y uso.
 
-## 🚀 **Cómo Ejecutar el Proyecto**
+## Recursos Utilizados
+### Hardware
+- **GPU de alto rendimiento** para la ejecución de modelos de IA, asegurando tiempos de inferencia óptimos y capacidad para procesar grandes volúmenes de imágenes.
 
-### 🔧 **Requisitos Previos**
-- **Python 3.8+**  
-- **pip** y virtualenv (opcional para entornos aislados)  
+### Software y Librerías
+- **Python 3.8+** con librerías especializadas como **PyTorch**, **Transformers (Hugging Face)** y **OpenCV** para la manipulación y análisis de imágenes.
+- **MongoDB** para el almacenamiento y gestión de datos, permitiendo consultas rápidas y escalabilidad del proyecto.
+- **Jupyter Notebooks** para la experimentación y validación de modelos.
+- **Streamlit** para la implementación de una interfaz de usuario interactiva y accesible.
 
-### 📦 **Instalación**
-```bash
-git clone https://github.com/tu_usuario/vqa-turismo.git
-cd vqa-turismo
-pip install -r requirements.txt
-```
+## Aplicación
+Se ha desarrollado una aplicación basada en **Streamlit** que permite:
+- **Gestión de preguntas e imágenes**, permitiendo la carga y almacenamiento eficiente de datos visuales.
+- **Ejecución de modelos de VQA**, que procesan imágenes en tiempo real para extraer información clave.
+- **Cálculo del Índice de Imagen Proyectada (PII)**, una métrica que evalúa la percepción visual del destino basándose en múltiples parámetros.
+- **Visualización de resultados**, permitiendo la exploración interactiva de las respuestas generadas por los modelos.
 
-### ▶️ **Ejecutar la Aplicación**
-```bash
-streamlit run webapp/main.py
-```
-Accede a la aplicación en tu navegador en `http://localhost:8501/`
+## Resultados y Conclusiones
+- Se ha demostrado la viabilidad del uso de modelos VQA para el análisis de imágenes turísticas, proporcionando información estructurada sobre la percepción de los destinos.
+- **BLIP-2 mostró un rendimiento superior** en términos de precisión en la generación de respuestas, consolidándose como el modelo más robusto para la tarea.
+- **PNP-VQA destacó por su flexibilidad y facilidad de integración**, permitiendo la implementación sin necesidad de reentrenamiento.
+- La combinación de estos modelos ha permitido optimizar la evaluación de imágenes, generando reportes automatizados y métricas útiles para la toma de decisiones en el sector turístico.
 
----
+## Trabajo Futuro
+- **Optimización del rendimiento en tiempo real**, mejorando la velocidad de inferencia de los modelos para facilitar su uso en entornos con restricciones de hardware.
+- **Reducción de sesgos en la interpretación de imágenes**, evaluando estrategias para mitigar posibles distorsiones en la representación de los datos.
+- **Integración con modelos de generación de imágenes**, permitiendo simulaciones visuales basadas en tendencias turísticas emergentes.
+- **Aplicaciones en otros sectores**, explorando su uso en educación, marketing y análisis documental.
+- **Expansión de la base de datos**, incluyendo imágenes de diversas regiones y tipos de turismo para mejorar la representatividad del análisis.
 
-## 📊 **Modelos Utilizados**
-| Modelo VQA           | Accuracy General | Accuracy en Sujetos | Accuracy en Actividades | Accuracy en Contexto | Tiempo de Ejecución |
-|----------------------|----------------|------------------|--------------------|----------------|-----------------|
-| VQAv2               | 18.23%         | 30.36%          | 27.6%             | 0.42%          | 188.22s         |
-| BLIP2-T5 (5XL)      | 87.9%          | 99.7%           | 97.92%            | 79.44%         | 206.31s         |
-| BLIP2-OPT 2.7B      | 57.61%         | 11.9%           | 5.21%             | 80.28%         | 1601.53s        |
-| VQA Base            | 75.64%         | 67.86%          | 66.67%            | 77.22%         | 202.35s         |
-
-📌 **Conclusión:** Se ha observado que una combinación de **BLIP2-T5 (5XL)** para sujetos y actividades, junto con **BLIP2-OPT** para contexto, mejora la precisión global en el análisis de imágenes turísticas.  
-
----
-
-## 🛠️ **Funcionalidades de la Aplicación**
-
-### 📌 **Vista de Inicio**
-Pantalla principal donde se presentan las opciones disponibles.
-
-### ❓ **Gestión de Preguntas**
-- **Carga de Preguntas:** Permite subir preguntas en formato `.txt` para integrarlas en el sistema.  
-- **Descarga de Preguntas:** Exporta preguntas almacenadas para su revisión y modificación.  
-
-### 🔄 **Gestión del Flujo de Preguntas**
-- **Carga de Flujo:** Define reglas sobre la relación entre preguntas y respuestas.  
-- **Descarga de Flujo:** Exporta la estructura del flujo de preguntas utilizada en el modelo.  
-
-### 🖼️ **Gestión de Imágenes**
-- **Carga de Imágenes:** Permite subir imágenes para su análisis con los modelos.  
-- **Descarga de Imágenes:** Exporta imágenes previamente analizadas para futuras comparaciones.  
-
-### 🤖 **Ejecución de Modelos**
-Permite seleccionar y ejecutar distintos modelos VQA sobre las imágenes cargadas para generar respuestas.
-
-### 📈 **Índice de Imagen Proyectada (PII)**
-- **Cálculo Básico:** Evaluación de la imagen proyectada a nivel de país.  
-- **Cálculo Avanzado:** Análisis detallado por regiones.  
+## Licencia
+Este proyecto se encuentra bajo la licencia **MIT**, permitiendo su uso y modificación sin restricciones significativas.
 
 ---
 
-## 🔬 **Trabajo Futuro**
-🚀 **Optimización de Modelos:** Fine-tuning en conjuntos de datos específicos del turismo.  
-🔗 **Integración con Bases de Conocimiento:** Uso de *Knowledge Graphs* para enriquecer la calidad de respuestas.  
-🌍 **Validación en Entornos Reales:** Implementación de la herramienta en escenarios turísticos.  
-📊 **Ampliación de Métricas de Evaluación:** Incorporación de técnicas avanzadas de análisis de resultados.  
-
----
-
-## 🏆 **Citación**
-Si este trabajo te ha resultado útil, por favor, cítalo de la siguiente manera:
-
-```bibtex
-@article{OpenAI2023GPT4V,
-  author    = {OpenAI},
-  title     = {GPT-4V: Multimodal Large Language Model},
-  year      = {2023},
-  journal   = {OpenAI Technical Report},
-  url       = {https://openai.com/research/gpt-4v}
-}
-```
-
----
-
-## 🤝 **Colaboradores**
-👤 **Tu Nombre** - [LinkedIn](https://linkedin.com/in/tu_usuario)  
-📧 Contacto: [tuemail@correo.com](mailto:tuemail@correo.com)  
-
-Si deseas contribuir, siéntete libre de hacer un *fork* del repositorio y enviar un *pull request* con tus mejoras.  
-
----
-
-## 📜 **Licencia**
-Este proyecto está bajo la licencia MIT. Consulta más detalles en el archivo `LICENSE`.
-
----
-
-🎯 **Este repositorio busca proporcionar una base sólida para la investigación y aplicación de modelos VQA en turismo, ofreciendo herramientas para mejorar la gestión y promoción de destinos turísticos a través de la inteligencia artificial.**
+Si tienes alguna pregunta o sugerencia, por favor, abre un issue en el repositorio. ¡Gracias por tu interés en este proyecto!
