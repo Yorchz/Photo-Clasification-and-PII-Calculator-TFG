@@ -2,6 +2,7 @@ import base64
 import os
 import streamlit as st
 from static_components.SideBar import SideBar
+from views.projected_img.ImgProjected import ImgProjected
 from views.images.ImageDownloader import ImageDownloader
 from views.images.ImageUploader import ImageUploader
 from views.questions_flow.QFlowDownloader import QFlowDownloader
@@ -31,8 +32,19 @@ class MultiApp:
     def _style_ulpgc_data(ulpgc_data):
         st.sidebar.markdown(
             f"""
-               <div style="display: flex; justify-content: center; margin-top: -50px; margin-bottom: 30px">
+               <div style="display: flex; justify-content: center; margin-top: -50px; margin-bottom: -70px">
                    <img src="data:image/png;base64,{ulpgc_data}" width="400" height="65">
+               </div>
+               """,
+            unsafe_allow_html=True,
+        )
+
+    @staticmethod
+    def _style_emotur_data(emotur_data):
+        st.sidebar.markdown(
+            f"""
+               <div style="display: flex; justify-content: center; margin-top: -70px; margin-bottom: -20px">
+                   <img src="data:image/png;base64,{emotur_data}" width="200" height="200">
                </div>
                """,
             unsafe_allow_html=True,
@@ -47,6 +59,8 @@ class MultiApp:
         self._load_style()
         ulpgc_data = self._load_images(self.PROJECT_PATH + "/streamlit_webapp/assets/eii.png")
         self._style_ulpgc_data(ulpgc_data)
+        emotur_data = self._load_images(self.PROJECT_PATH + "/streamlit_webapp/assets/emotur_logo-removebg-preview.png")
+        self._style_emotur_data(emotur_data)
 
         menu_selection = SideBar().run()
 
@@ -77,8 +91,12 @@ class MultiApp:
 
 
         elif menu_selection == '🖥️ Modelo':
-            modelo_app = Model()
-            modelo_app.run()
+            model_app = Model()
+            model_app.run()
+
+        elif menu_selection == '📽 Imagen Projectada':
+            img_projected = ImgProjected()
+            img_projected.run()
 
 
 if __name__ == "__main__":
