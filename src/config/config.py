@@ -24,7 +24,7 @@ CONFIG = {
                     "Travel_Group","Activity_Type","Activity_Done","Context_Type","Resource_Types","Flora_Types",
                     "Fauna_Types","Landscape_Types","Tourist_Resource_Types","Heritage_Types","Cultural_Elements",
                     "Gastronomy_Types","Leisure_Activities","Leisure_Types","Sports_Types","Shopping_Facilities",
-                    "Accommodation_Types","Infrastructure_Types"],
+                    "Accommodation_Types","Infrastructure_Types", "Mar"],
         'conditions': {
             'People': ['yes'],
             'Role': ['primary', 'secondary'],
